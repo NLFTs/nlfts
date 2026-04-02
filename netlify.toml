@@ -1,0 +1,7 @@
+[build]
+  command = "pnpm run build"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  NPM_FLAGS = "--version"
