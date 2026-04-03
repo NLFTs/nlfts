@@ -2,12 +2,23 @@
 import gsap from 'gsap'
 import ImpactStats from '@/components/ImpactStats.vue'
 import ProfileSection from '@/components/ProfileSection.vue'
+import BlogSection from '@/components/BlogSection.vue'
+import DownloadAppSection from '@/components/DownloadAppSection.vue'
+import TestimonialsSection from '@/components/TestimonialsSection.vue'
 
 // SEO Implementation
 useSeoMeta({
-  title: 'Assalaam - Ekosistem Talenta Masa Depan',
-  ogTitle: 'Assalaam - Ekosistem Talenta Masa Depan',
-  description: 'Belajar teknologi dengan Kurikulum Industri, Dapatkan Sertifikasi Global, dan Bangun Portofolio yang Siap Kerja.',
+  title: 'SMK Assalaam Bandung || Sekolah Nomor #1 di Bandung Indonesia',
+  ogTitle: 'SMK Assalaam Bandung || Sekolah Nomor #1 di Bandung Indonesia',
+  description: 'SMK Assalaam adalah bagian dari Yayasan Assalaam yang mempersiapkan siswa untuk siap kerja dengan keterampilan & profesional di bidang industri dan kewirausahaan moderen. Terakreditasi A',
+  ogDescription: 'SMK Assalaam adalah bagian dari Yayasan Assalaam yang mempersiapkan siswa untuk siap kerja dengan keterampilan & profesional di bidang industri dan kewirausahaan moderen. Terakreditasi A',
+  ogImage: '/assalaam.svg',
+  ogUrl: 'https://assalaam.sch.id',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'SMK Assalaam Bandung || Sekolah Nomor #1 di Bandung Indonesia',
+  twitterDescription: 'SMK Assalaam Bandung adalah sekolah kejuruan yang berfokus pada teknologi dan industri.',
+  twitterImage: '/assalaam.svg',
 })
 
 // Impact Stats Data
@@ -145,7 +156,7 @@ onUnmounted(() => {
             <UIcon name="i-lucide-check" class="w-3 h-3" />
           </div>
           <span class="text-[10px] md:text-xs font-semibold tracking-tight text-gray-700 dark:text-gray-200 uppercase">
-            {{ subDescription }}
+            Sekolah Menengah Kejuruan No <span class ="text-amber-500">#1</span> di Bandung, Indonesia
           </span>
         </div>
 
@@ -173,16 +184,17 @@ onUnmounted(() => {
         <!-- Actions -->
         <div class="flex flex-wrap justify-center gap-6">
           <NuxtLink
-            to="/signup"
+            to="https://ppdb.smkassalaambandung.sch.id/"
             class="px-8 py-3 bg-gray-950 dark:bg-white text-white dark:text-gray-950 text-sm font-bold rounded-2xl shadow-xl transition-all hover:scale-105 hover:bg-primary-600 dark:hover:bg-primary-50 active:scale-95"
           >
-            Mulai Karier
+            PPDB
           </NuxtLink>
           <NuxtLink
-            to="/docs"
-            class="px-8 py-3 text-sm font-bold text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-white/10 rounded-2xl backdrop-blur-md transition-all hover:bg-gray-50 dark:hover:bg-white/5"
+            to="https://play.google.com/store/apps/details?id=com.sim.app.yayasan&pcampaignid=web_share"
+            class="flex items-center gap-2 px-8 py-3 text-sm font-bold text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-white/10 rounded-2xl backdrop-blur-md transition-all hover:bg-gray-50 dark:hover:bg-white/5"
           >
-            Eksplorasi
+            <UIcon name="i-simple-icons-googleplay" class="w-4 h-4" /> 
+            <span>Unduh</span>
           </NuxtLink>
         </div>
       </section>
@@ -223,6 +235,9 @@ onUnmounted(() => {
               <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
                 <img src="/company/fuso.png" class="h-12 md:h-16 w-full object-contain dark:invert pointer-events-none" alt="Fuso" onerror="this.src='https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg'" />
               </div>
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                <img src="/company/dakpng.png" class="h-12 md:h-16 w-full object-contain dark:invert pointer-events-none" alt="Fuso" onerror="this.src='https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg'" />
+              </div>
               <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 bg-gray-50/50 dark:bg-transparent transition-all duration-700">
                 <span class="text-3xl md:text-4xl font-black tracking-tighter text-gray-900 dark:text-white">NLFTs</span>
               </div>
@@ -246,6 +261,16 @@ onUnmounted(() => {
 
     <!-- PROFILE SECTION -->
     <ProfileSection />
+
+    <!-- BLOG SECTION -->
+    <BlogSection />
+
+    <!-- DOWNLOAD APP SECTION -->
+    <DownloadAppSection />
+
+    <!-- TESTIMONIALS SECTION -->
+    <TestimonialsSection />
+    <LocationSection />
   </main>
 </template>
 

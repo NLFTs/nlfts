@@ -17,7 +17,8 @@ defineProps({
 
 <template>
   <div class="w-full h-full flex flex-col justify-center text-center bg-slate-900 p-8">
-    <div class="relative">
+    <div class="relative flex flex-col items-center">
+      <img src="/assalaam.svg" class="w-32 h-auto mb-8" alt="Logo">
       <h1 class="text-8xl mb-4 text-white">
         {{ title }}
       </h1>
