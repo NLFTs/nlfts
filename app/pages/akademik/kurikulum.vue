@@ -13,10 +13,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-white dark:bg-[#020618]">
+  <main class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-white dark:bg-[#09090b]">
     <!-- Efek Background -->
     <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-transparent dark:from-primary-900/20 dark:via-[#020618] dark:to-[#020618]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-500/10 via-transparent to-transparent dark:from-primary-900/20 dark:via-[#09090b] dark:to-[#09090b]"></div>
       <!-- Kita bisa reuse komponen yang ada bila perlu -->
       <StarsBg class="absolute inset-0 opacity-10 dark:opacity-40" />
     </div>

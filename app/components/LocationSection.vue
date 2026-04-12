@@ -56,7 +56,7 @@ const onMouseLeave = (el: HTMLElement) => {
 <template>
   <section 
     ref="sectionRef"
-    class="relative py-24 md:py-40 bg-white dark:bg-[#020618] border-b border-gray-100 dark:border-white/5 overflow-hidden"
+    class="relative py-24 md:py-40 bg-white dark:bg-[#09090b] border-b border-gray-100 dark:border-white/5 overflow-hidden"
   >
     <UContainer>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">

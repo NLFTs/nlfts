@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 // ── Navigation Data ─────────────────────────────────
 const akademikLinks = [
-  { icon: 'i-lucide-graduation-cap', label: 'Program Keahlian', desc: 'RPL, TKJ, dan TSM unggulan.', to: '/akademik/jurusan' },
+  { icon: 'i-lucide-graduation-cap', label: 'Program Keahlian', desc: 'RPL, TSM, dan TKR unggulan.', to: '/akademik/jurusan' },
   { icon: 'i-lucide-book-open', label: 'Kurikulum Industri', desc: 'Standar industri & sertifikasi.', to: '/akademik/kurikulum' },
   { icon: 'i-lucide-monitor', label: 'Fasilitas', desc: 'Lab komputer & bengkel modern.', to: '/akademik/fasilitas' },
   { icon: 'i-lucide-award', label: 'Prestasi', desc: 'Pencapaian siswa & sekolah.', to: '/akademik/prestasi' }
@@ -141,10 +141,9 @@ onUnmounted(() => {
   <!-- ════════════════════════════════════════════════ -->
   <header
     ref="headerEl"
-    class="sticky top-0 z-50 w-full border-b border-border/40 bg-background backdrop-blur-none"
+    class="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-800/50 bg-white dark:bg-[#09090b] backdrop-blur-none"
   >
-    <!-- Top Alert Banner (Constrained within navbar borders) -->
-    <div class="max-w-7xl mx-auto border-x border-border/50 bg-[#ef4444] text-white py-1.5 px-5 sm:px-6 flex items-center justify-between text-[10px] font-bold tracking-tight">
+    <div class="max-w-7xl mx-auto border-x border-white/20 bg-[#ef4444] text-white py-1.5 px-5 sm:px-6 flex items-center justify-between text-[10px] font-bold tracking-tight">
        <div class="flex items-center gap-1.5">
           <UIcon name="i-lucide-alert-triangle" class="w-3 h-3" />
           <span>Situs ini bukan resmi SMK Assalaam, redisain by <NuxtLink to="http://davingm.com" target="_blank" class="underline decoration-white/30 underline-offset-2 hover:decoration-white transition-all">@davingm</NuxtLink></span>
@@ -154,7 +153,7 @@ onUnmounted(() => {
        </NuxtLink>
     </div>
 
-    <div class="max-w-7xl mx-auto border-x border-border/50">
+    <div class="max-w-7xl mx-auto border-x border-zinc-200/80 dark:border-zinc-800">
       <div class="flex items-center justify-between h-14 px-5 sm:px-6">
         <!-- Logo -->
         <NuxtLink to="/" class="nav-enter shrink-0">
@@ -215,11 +214,11 @@ onUnmounted(() => {
     <div
       v-if="activeMenu"
       ref="dropdownEl"
-      class="absolute left-0 right-0 top-full bg-background border-b border-border/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)]"
+      class="absolute left-0 right-0 top-full bg-white dark:bg-[#09090b] border-b border-zinc-200 dark:border-zinc-800/50 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)]"
       @mouseenter="cancelClose"
       @mouseleave="scheduleClose"
     >
-      <div class="max-w-7xl mx-auto border-x border-border/50">
+      <div class="max-w-7xl mx-auto border-x border-zinc-200/80 dark:border-zinc-800">
 
         <!-- ▸ Akademik Panel -->
         <div v-if="activeMenu === 'akademik'" class="p-6 sm:p-8">
@@ -336,7 +335,7 @@ onUnmounted(() => {
       <!-- Panel (slides from right) -->
       <div
         ref="mobilePanel"
-        class="absolute top-0 right-0 bottom-0 w-[85vw] max-w-[380px] bg-background shadow-2xl flex flex-col"
+        class="absolute top-0 right-0 bottom-0 w-[85vw] max-w-[380px] bg-white dark:bg-[#09090b] shadow-2xl flex flex-col"
       >
         <!-- Header -->
         <div class="mob-item flex items-center justify-between px-5 h-14 border-b border-border/40">

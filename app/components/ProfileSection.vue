@@ -73,7 +73,7 @@ onMounted(async () => {
 <template>
   <section 
     ref="sectionRef" 
-    class="py-32 border-b border-gray-100 dark:border-white/5 bg-white dark:bg-[#020617] overflow-hidden"
+    class="py-32 border-b border-gray-100 dark:border-white/5 bg-white dark:bg-[#09090b] overflow-hidden"
   >
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">

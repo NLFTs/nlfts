@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        '/akademik/kurikulum'
+        '/akademik/kurikulum',
+        '/akademik/jurusan'
       ],
       crawlLinks: true
     }

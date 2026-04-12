@@ -66,7 +66,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="statsContainer" class="w-full bg-white dark:bg-[#020618] border-b border-gray-100 dark:border-white/5 py-20">
+  <div ref="statsContainer" class="w-full bg-white dark:bg-[#09090b] border-b border-gray-100 dark:border-white/5 py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
         <div 

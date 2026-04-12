@@ -21,8 +21,8 @@
 }
 
 .dark {
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-900);
-  --ui-bg-accented: var(--ui-color-neutral-800);
+  --ui-bg: #09090b;
+  --ui-bg-muted: #18181b;
+  --ui-bg-elevated: #18181b;
+  --ui-bg-accented: #27272a;
 }

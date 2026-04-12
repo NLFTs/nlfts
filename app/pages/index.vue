@@ -89,13 +89,21 @@ const animateTransition = () => {
 }
 
 onMounted(() => {
-  // Initial Anim
-  nextTick(() => {
+  // Initial Anim - Optimized for zero-white-flicker
+  // Using a very small timeout instead of nextTick for faster response
+  setTimeout(() => {
     const initialWords = titleRef.value?.querySelectorAll('.word-span')
     if (initialWords) {
-      gsap.from(initialWords, { y: 40, opacity: 0, rotateX: -90, stagger: 0.05, duration: 1, ease: 'expo.out' })
+      gsap.from(initialWords, { 
+        y: 20, 
+        rotateX: -15, 
+        stagger: 0.02, 
+        duration: 0.6, 
+        ease: 'power2.out',
+        // No opacity: 0 here to keep text visible
+      })
     }
-  })
+  }, 100)
 
   // GSAP Context for background effects
   ctx = gsap.context(() => {
@@ -122,7 +130,7 @@ onUnmounted(() => {
 
 <template>
   <main>
-    <div ref="heroContainer" class="relative overflow-hidden flex flex-col justify-start pt-8 md:pt-12 bg-white dark:bg-[#020618] selection:bg-primary-500/30">
+    <div ref="heroContainer" class="relative overflow-hidden flex flex-col justify-start pt-8 md:pt-12 bg-white dark:bg-[#09090b] selection:bg-primary-500/30">
       <!-- UNIQUE BACKGROUND: Dynamic Mesh & Floating Glass -->
       <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <!-- Animated Blobs (Aero Style) -->
@@ -163,10 +171,10 @@ onUnmounted(() => {
         <!-- Main Title (Rotating Characters) -->
         <h1 
           ref="titleRef"
-          class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-8 font-sans perspective-2000 h-[3.5em] md:h-[2.5em] flex flex-wrap justify-center content-center"
+          class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-8 font-sans perspective-2000 min-h-[4em] md:min-h-[3em] flex flex-wrap justify-center content-center"
         >
           <template v-for="(word, i) in (content[currentIndex]?.title?.split(' ') || [])" :key="`${currentIndex}-${i}`">
-            <span class="word-span inline-block origin-center opacity-1">
+            <span class="word-span inline-block origin-center opacity-100">
               {{ word }}
             </span>
             <span class="inline-block w-[0.25em]" v-if="i < (content[currentIndex]?.title?.split(' ')?.length || 0) - 1" aria-hidden="true">&nbsp;</span>
@@ -207,38 +215,38 @@ onUnmounted(() => {
     </div>
 
     <!-- TRUSTED BY SECTION -->
-    <section class="relative border-y border-gray-100 dark:border-white/5 bg-white dark:bg-[#020618] overflow-hidden">
+    <section class="relative border-y border-gray-100 dark:border-white/5 bg-white dark:bg-[#09090b] overflow-hidden">
       <div class="flex flex-col md:flex-row w-full max-w-7xl mx-auto relative group/section">
-        <div class="md:w-[280px] shrink-0 p-8 flex flex-col items-center md:items-start justify-center border-r border-gray-100 dark:border-white/5 z-20 bg-white dark:bg-[#020618] relative">
+        <div class="md:w-[280px] shrink-0 p-8 flex flex-col items-center md:items-start justify-center border-r border-gray-100 dark:border-white/5 z-20 bg-white dark:bg-[#09090b] relative">
           <h2 class="text-xs md:text-sm font-black tracking-[0.1em] text-gray-400 dark:text-gray-500 uppercase leading-snug text-center md:text-left">
             Memberdayakan Ide<br />
             <span class="text-gray-900 dark:text-gray-300">untuk yang Terbaik & Tercerdas</span>
           </h2>
-          <div class="absolute inset-y-0 -right-20 w-20 bg-gradient-to-r from-white dark:from-[#020618] to-transparent z-10 pointer-events-none hidden md:block" />
+          <div class="absolute inset-y-0 -right-20 w-20 bg-gradient-to-r from-white dark:from-[#09090b] to-transparent z-10 pointer-events-none hidden md:block" />
         </div>
 
         <div class="flex-grow overflow-hidden relative flex z-10">
           <div class="flex logo-scroll-track items-center h-full">
             <div v-for="n in 2" :key="n" class="flex flex-shrink-0 h-full">
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 transition-all duration-700">
                 <img src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" class="h-14 md:h-18 w-full object-contain pointer-events-none" alt="Google" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 transition-all duration-700">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/1280px-Honda.svg.png?_=20250619145147" class="h-14 md:h-18 w-full object-contain dark:invert pointer-events-none" alt="Honda" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 transition-all duration-700">
                 <img src="/company/mitshubisi.png" class="h-14 md:h-18 w-full object-contain dark:invert pointer-events-none" alt="Mitsubishi" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 bg-gray-50/50 dark:bg-transparent transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-transparent transition-all duration-700">
                 <img src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" class="h-14 md:h-18 w-full object-contain pointer-events-none" alt="Microsoft" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 transition-all duration-700">
                 <img src="/company/fuso.png" class="h-12 md:h-16 w-full object-contain dark:invert pointer-events-none" alt="Fuso" onerror="this.src='https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg'" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 transition-all duration-700">
                 <img src="/company/dakpng.png" class="h-12 md:h-16 w-full object-contain dark:invert pointer-events-none" alt="Fuso" onerror="this.src='https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg'" />
               </div>
-              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 bg-gray-50/50 dark:bg-transparent transition-all duration-700">
+              <div class="w-[200px] md:w-[240px] px-6 md:px-8 py-10 md:py-12 flex items-center justify-center border-r border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-transparent transition-all duration-700">
                 <span class="text-3xl md:text-4xl font-black tracking-tighter text-gray-900 dark:text-white">NLFTs</span>
               </div>
             </div>
@@ -297,6 +305,10 @@ onUnmounted(() => {
 
 .logo-scroll-track {
   animation: logo-scroll 30s linear infinite;
+}
+
+.logo-scroll-track:hover {
+  animation-play-state: paused;
 }
 
 @keyframes logo-scroll {

@@ -41,7 +41,7 @@ onMounted(async () => {
 <template>
   <section 
     ref="sectionRef"
-    class="py-24 bg-gray-50/30 dark:bg-[#020618] border-b border-gray-100 dark:border-white/5"
+    class="py-24 bg-gray-50/30 dark:bg-[#09090b] border-b border-gray-100 dark:border-white/5"
   >
     <UContainer>
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

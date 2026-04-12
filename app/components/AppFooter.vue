@@ -152,8 +152,8 @@ const onGiantMove = (e: MouseEvent) => {
 </script>
 
 <template>
-  <footer 
-    class="bg-white dark:bg-[#020618] pt-24 pb-12 overflow-hidden border-t border-gray-100 dark:border-white/5"
+    <footer 
+    class="bg-white dark:bg-[#09090b] pt-24 pb-12 overflow-hidden border-t border-zinc-200/80 dark:border-zinc-800"
     @mousemove="onGiantMove"
   >
     <UContainer>

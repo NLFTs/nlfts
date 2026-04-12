@@ -110,7 +110,7 @@ onMounted(async () => {
 <template>
   <section 
     ref="sectionRef"
-    class="relative py-32 md:py-48 bg-white dark:bg-[#020618] border-b border-gray-100 dark:border-white/5 overflow-hidden"
+    class="relative py-32 md:py-48 bg-white dark:bg-[#09090b] border-b border-gray-100 dark:border-white/5 overflow-hidden"
   >
     <!-- ARCHITECTURAL SVG BACKGROUND -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -204,7 +204,7 @@ onMounted(async () => {
             
             <!-- SMARTPHONE ARCHITECTURE -->
             <div class="relative w-[280px] h-[580px] md:w-[320px] md:h-[650px] bg-slate-100/50 dark:bg-white/5 backdrop-blur-3xl rounded-[3.5rem] border-[1px] border-white/20 dark:border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.4)] flex items-center justify-center p-3">
-              <div class="w-full h-full rounded-[2.8rem] bg-white dark:bg-[#020618] border border-gray-100 dark:border-white/10 overflow-hidden relative">
+              <div class="w-full h-full rounded-[2.8rem] bg-white dark:bg-[#09090b] border border-gray-100 dark:border-white/10 overflow-hidden relative">
                 
                 <!-- Internal App Screenshot -->
                 <img 
@@ -219,7 +219,7 @@ onMounted(async () => {
             </div>
 
             <!-- FLOATING UI DATA -->
-            <div class="ui-card absolute -left-16 top-10 p-5 bg-white/90 dark:bg-[#020618]/90 backdrop-blur-2xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl w-52 z-20">
+            <div class="ui-card absolute -left-16 top-10 p-5 bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-2xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl w-52 z-20">
               <div class="flex items-center gap-3 mb-3">
                 <UIcon name="i-lucide-activity" class="w-4 h-4 text-primary-500" />
                 <span class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Attendance System</span>
@@ -230,7 +230,7 @@ onMounted(async () => {
               </div>
             </div>
 
-            <div class="ui-card absolute -right-12 bottom-20 p-5 bg-white/90 dark:bg-[#020618]/90 backdrop-blur-2xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl w-48 z-20">
+            <div class="ui-card absolute -right-12 bottom-20 p-5 bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-2xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-2xl w-48 z-20">
               <div class="flex items-center gap-3 mb-3">
                 <UIcon name="i-lucide-zap" class="w-4 h-4 text-amber-500" />
                 <span class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Fast Action</span>

@@ -154,7 +154,7 @@ onMounted(async () => {
 <template>
   <section 
     ref="sectionRef"
-    class="relative py-24 md:py-32 bg-[#F9F9F8] dark:bg-[#020618] border-b border-gray-100 dark:border-white/5 overflow-hidden"
+    class="relative py-24 md:py-32 bg-[#F9F9F8] dark:bg-[#09090b] border-b border-gray-100 dark:border-white/5 overflow-hidden"
   >
     <!-- SUBTLE BACKGROUND BLUR -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 blur-[150px] rounded-full pointer-events-none" />
