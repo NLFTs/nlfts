@@ -5,11 +5,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 useSeoMeta({
-  title: 'Program Keahlian',
-  description: 'Tiga program keahlian unggulan SMK Assalaam Bandung — RPL, TSM, TKR. Kurikulum berbasis industri, fasilitas berstandar global.',
-  ogTitle: 'Program Keahlian — SMK Assalaam Bandung',
-  ogDescription: 'Temukan potensimu di program keahlian yang dirancang bersama industri.',
-  ogImage: '/rakitweb.jpeg',
+  title: 'Layanan RakitWeb',
+  description: 'Layanan jasa pembuatan website, hosting, domain, game server, dan aplikasi Android dari RakitWeb — solusi digital terpercaya di Semarang.',
+  ogTitle: 'Layanan RakitWeb — Solusi Digital Lengkap',
+  ogDescription: 'Temukan layanan digital terbaik dari RakitWeb untuk bisnis Anda.',
+  ogImage: 'https://rakitweb.id/rakitweb.jpeg',
   twitterCard: 'summary_large_image',
   robots: 'index, follow'
 })

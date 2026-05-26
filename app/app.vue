@@ -1,153 +1,119 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const route = useRoute()
 
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : 'white')
+const canonicalUrl = computed(() => `https://rakitweb.id${route.path}`)
 
 useHead(() => ({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { key: 'theme-color', name: 'theme-color', content: color.value },
+    { name: 'application-name', content: 'RakitWeb' },
+    { name: 'author', content: 'RakitWeb' },
+    { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
 
     // ── TrapStack: Meta signatures ───────────────────────────────────────
-    // WordPress (generator trap)
     { name: 'generator', content: 'WordPress 6.4.3' },
-    { name: 'application-name', content: 'RakitWeb' },
-
-    // Google Analytics (UA + GA4 trap)
     { name: 'google-site-verification', content: 'trapstack-ga-verification-fake' },
-
-    // Algolia (crawler reads meta for docsearch config)
     { name: 'docsearch:language', content: 'id' },
     { name: 'docsearch:version', content: '1.0.0' },
-
-    // Twikoo (comment system fingerprint)
     { name: 'twikoo:version', content: '1.6.22' },
-
-    // RSS feed discovery (feed readers & crawlers detect this)
-    { type: 'application/rss+xml', rel: 'alternate', title: 'RakitWeb RSS Feed', href: '/feed.xml' }
   ],
 
   link: [
     { rel: 'icon', type: 'image/jpeg', href: '/rakitweb.jpeg' },
-
-    // RSS & Atom feed trap (Wappalyzer detects rel=alternate)
-    { rel: 'alternate', type: 'application/rss+xml', title: 'RakitWeb Blog', href: '/feed.xml' },
-    { rel: 'alternate', type: 'application/atom+xml', title: 'RakitWeb Atom', href: '/atom.xml' },
-
-    // Algolia DocSearch CSS signature
+    { rel: 'canonical', href: canonicalUrl.value },
+    // RSS feeds
+    { rel: 'alternate', type: 'application/rss+xml', title: 'RakitWeb Blog RSS', href: 'https://rakitweb.id/rss.xml' },
+    { rel: 'alternate', type: 'application/atom+xml', title: 'RakitWeb Blog Atom', href: 'https://rakitweb.id/atom.xml' },
+    // Algolia DocSearch CSS signature (TrapStack)
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.css', 'data-trapstack': 'algolia' }
   ],
 
   script: [
-    // ── Google Analytics GA4 trap ────────────────────────────────────────
-    // Wappalyzer detects gtag.js src pattern
+    // ── JSON-LD: Organization structured data ────────────────────────────
     {
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-TRAPSTACK00',
-      async: true,
-      'data-trapstack': 'google-analytics'
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'RakitWeb',
+        url: 'https://rakitweb.id',
+        logo: 'https://rakitweb.id/rakitweb.jpeg',
+        description: 'Jasa pembuatan website, hosting, domain, game server, dan aplikasi Android di Semarang, Indonesia.',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Semarang',
+          addressRegion: 'Jawa Tengah',
+          addressCountry: 'ID'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+62-831-6032-5595',
+          contactType: 'customer service',
+          availableLanguage: 'Indonesian'
+        },
+        sameAs: [
+          'https://www.instagram.com/rakitweb_id',
+          'https://github.com/RakitWeb',
+          'https://www.tiktok.com/@webcraftidng'
+        ]
+      })
     },
-    // gtag() init — crawler reads window.dataLayer & gtag calls
+
+    // ── JSON-LD: WebSite + SearchAction (sitelinks searchbox) ────────────
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'RakitWeb',
+        url: 'https://rakitweb.id',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://rakitweb.id/docs/getting-started?q={search_term_string}'
+          },
+          'query-input': 'required name=search_term_string'
+        }
+      })
+    },
+
+    // ── TrapStack: window signatures ─────────────────────────────────────
     {
       innerHTML: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-TRAPSTACK00');
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Anime.js trap ────────────────────────────────────────────────────
-    // Wappalyzer detects window.anime & animejs CDN pattern
-    {
-      innerHTML: `
-        /* TrapStack: animejs */
         window.anime = { version: '3.2.2', running: [], speed: 1 };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── GSAP trap ────────────────────────────────────────────────────────
-    // Wappalyzer detects window.gsap & window.ScrollTrigger
-    {
-      innerHTML: `
-        /* TrapStack: gsap */
         if(!window.gsap){ window.gsap = { version: '3.12.5' }; }
         if(!window.ScrollTrigger){ window.ScrollTrigger = { version: '3.12.5' }; }
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Angular trap ─────────────────────────────────────────────────────
-    // Wappalyzer detects ng-version attribute & window.ng
-    {
-      innerHTML: `
-        /* TrapStack: angular */
         window.ng = { version: { full: '17.3.12', major: 17 }, probe: function(){} };
         window.getAllAngularRootElements = function(){ return []; };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Prism.js trap ────────────────────────────────────────────────────
-    // Wappalyzer detects window.Prism & class="language-*" pattern
-    {
-      innerHTML: `
-        /* TrapStack: prismjs */
         window.Prism = { version: '1.29.0', languages: { javascript: true, php: true, typescript: true } };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Algolia DocSearch trap ───────────────────────────────────────────
-    // Wappalyzer detects docsearch() call & algolia CDN
-    {
-      innerHTML: `
-        /* TrapStack: algolia-docsearch */
         window.__ALGOLIA__ = { version: '4.22.1', appId: 'TRAPSTACK' };
         window.docsearch = function(cfg){ return { destroy: function(){} }; };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Twikoo trap ──────────────────────────────────────────────────────
-    // Wappalyzer detects twikoo.init() call & window.twikoo
-    {
-      innerHTML: `
-        /* TrapStack: twikoo */
         window.twikoo = { version: '1.6.22', init: function(cfg){ return Promise.resolve(); } };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Ko-fi widget trap ────────────────────────────────────────────────
-    // Ko-fi detected via kofiWidgetOverlay object & script src pattern
-    {
-      innerHTML: `
-        /* TrapStack: ko-fi */
-        window.kofiWidgetOverlay = {
-          draw: function(name, cfg){ return true; },
-          'close': function(){}
-        };
-      `,
-      type: 'text/javascript'
-    },
-
-    // ── Buy Me a Coffee widget trap ──────────────────────────────────────
-    // Detected via window.BMC & data-name attribute pattern
-    {
-      innerHTML: `
-        /* TrapStack: buymeacoffee */
+        window.kofiWidgetOverlay = { draw: function(name, cfg){ return true; }, 'close': function(){} };
         window.BMC = { version: '1.0.0', open: function(){}, close: function(){} };
       `,
       type: 'text/javascript'
+    },
+
+    // ── TrapStack: GA4 script src ─────────────────────────────────────────
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-TRAPSTACK00',
+      async: true,
+      'data-trapstack': 'google-analytics'
     }
   ],
 
   htmlAttrs: {
     lang: 'id',
-    // Angular trap: ng-version attribute di <html> — Wappalyzer cek ini
     'ng-version': '17.3.12'
   }
 }))

@@ -12,13 +12,13 @@ useSeoMeta({
   ogTitle: 'RakitWeb — Jasa Pembuatan Website & Digital Solution',
   description: 'RakitWeb menyediakan jasa pembuatan website, setup hosting & domain, pembuatan aplikasi Android, hingga konfigurasi game server dengan harga terjangkau.',
   ogDescription: 'RakitWeb menyediakan jasa pembuatan website, setup hosting & domain, pembuatan aplikasi Android, hingga konfigurasi game server dengan harga terjangkau.',
-  ogImage: '/rakitweb.svg',
+  ogImage: 'https://rakitweb.id/rakitweb.jpeg',
   ogUrl: 'https://rakitweb.id',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'RakitWeb — Jasa Pembuatan Website & Digital Solution',
   twitterDescription: 'RakitWeb: solusi digital terbaik untuk bisnis Anda — website, hosting, Android, dan game server.',
-  twitterImage: '/rakitweb.svg',
+  twitterImage: 'https://rakitweb.id/rakitweb.jpeg',
 })
 
 // Impact Stats Data

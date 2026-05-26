@@ -27,7 +27,7 @@ const team = [
     name: 'Chandra',
     role: 'Founder of RakitWeb',
     experience: '2+ tahun pengalaman',
-    avatar: 'https://avatars.githubusercontent.com/u/webcraftidng?v=4',
+    avatar: './blog/kucing.jpeg',
     fallbackAvatar: 'https://ui-avatars.com/api/?name=Web+Engineer&background=10b981&color=fff&size=200&bold=true',
     bio: 'Spesialis UI/UX dan performa frontend. Memastikan setiap pixel tampil sempurna di semua perangkat.',
     stacks: [

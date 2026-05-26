@@ -116,16 +116,16 @@ export const collections = {
     source: '3.blog/**/*',
     type: 'page',
     schema: z.object({
-      image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+      image: z.object({ src: z.string().optional() }).optional(),
       authors: z.array(
         z.object({
           name: z.string().nonempty(),
-          to: z.string().nonempty(),
-          avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
+          to: z.string().optional(),
+          avatar: z.object({ src: z.string().optional() }).optional()
         })
-      ),
-      date: z.date(),
-      badge: z.object({ label: z.string().nonempty() })
+      ).optional(),
+      date: z.date().optional(),
+      badge: z.object({ label: z.string().nonempty() }).optional()
     })
   }),
   changelog: defineCollection({

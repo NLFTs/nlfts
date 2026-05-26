@@ -2,13 +2,13 @@
 import { useSeoMeta } from '#imports'
 
 useSeoMeta({
-  title: 'Kurikulum Akademik',
-  description: 'Informasi lengkap mengenai kurikulum unggulan yang diterapkan di SMK Assalaam Bandung. Mengintegrasikan teknologi mutakhir dan pendidikan karakter Islami.',
-  ogTitle: 'Kurikulum Akademik - SMK Assalaam Bandung',
-  ogDescription: 'Pelajari kurikulum unggulan SMK Assalaam Bandung yang dirancang sesuai dengan standar industri terkini dan nilai-nilai Islami.',
-  ogImage: '/rakitweb.jpeg',
+  title: 'Tentang RakitWeb',
+  description: 'Informasi lengkap tentang RakitWeb — jasa pembuatan website, hosting, domain, game server, dan aplikasi Android di Semarang, Indonesia.',
+  ogTitle: 'Tentang RakitWeb — Solusi Digital Terpercaya',
+  ogDescription: 'Pelajari lebih lanjut tentang RakitWeb dan layanan digital yang kami tawarkan untuk bisnis Anda.',
+  ogImage: 'https://rakitweb.id/rakitweb.jpeg',
   twitterCard: 'summary_large_image',
-  robots: 'index, follow' // Membantu bot mendeteksi dan mengindeks
+  robots: 'index, follow'
 })
 </script>
 
