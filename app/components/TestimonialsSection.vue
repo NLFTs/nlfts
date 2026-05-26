@@ -10,9 +10,9 @@ const sectionRef = ref<HTMLElement | null>(null)
 
 const testimonials = [
   { 
-    name: "Budi Santoso", role: "Owner Toko Elektronik, Semarang", 
-    content: "Kami order website toko online ke RakitWeb, hasilnya luar biasa! Modern, cepat, dan pelanggan kami jadi lebih mudah order. Harga juga sangat terjangkau.", 
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Budi", 
+    name: "Ihsan, Owner Ruang Berita", role: "",
+    content: "Kami order website berita ke RakitWeb, hasil nya mantap! terutama untuk server nya lancar jaya", 
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ihsan", 
     isDark: true, logo: "i-lucide-globe" 
   },
   { 
