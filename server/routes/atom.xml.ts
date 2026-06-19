@@ -1,7 +1,7 @@
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineEventHandler(async (event) => {
-  const baseUrl = 'https://rakitweb.id'
+  const baseUrl = 'https://NLFTs.dev'
 
   let posts: any[] = []
   try {
@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   const entries = posts.map((post) => {
     const url = `${baseUrl}${post.path ?? '/blog'}`
     const published = post.date ? new Date(post.date).toISOString() : new Date().toISOString()
-    const author = post.authors?.[0]?.name ?? 'RakitWeb'
+    const author = post.authors?.[0]?.name ?? 'NLFTs'
 
     return `
   <entry>
@@ -36,14 +36,14 @@ export default defineEventHandler(async (event) => {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>RakitWeb Blog</title>
-  <subtitle>Tips, tutorial, dan info seputar web development dari tim RakitWeb.</subtitle>
+  <title>NLFTs Blog</title>
+  <subtitle>Tips, tutorial, dan info seputar web development dari tim NLFTs.</subtitle>
   <link href="${baseUrl}/blog"/>
   <link rel="self" href="${baseUrl}/atom.xml" type="application/atom+xml"/>
   <id>${baseUrl}/</id>
   <updated>${updated}</updated>
-  <author><name>RakitWeb</name><email>halo@rakitweb.id</email></author>
-  <icon>${baseUrl}/rakitweb.png</icon>
+  <author><name>NLFTs</name><email>halo@NLFTs.dev</email></author>
+  <icon>${baseUrl}/NLFTs.png</icon>
   ${entries}
 </feed>`
 

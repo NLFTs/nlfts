@@ -41,8 +41,8 @@ const columns = [
 ]
 
 const socialLinks = [
-  { icon: 'i-simple-icons-github', to: 'https://github.com/RakitWeb', label: 'GitHub' },
-  { icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/rakitweb_id', label: 'Instagram' },
+  { icon: 'i-simple-icons-github', to: 'https://github.com/NLFTs', label: 'GitHub' },
+  { icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/NLFTs_id', label: 'Instagram' },
   { icon: 'i-simple-icons-whatsapp', to: 'https://wa.me/6283160325595', label: 'WhatsApp' },
   { icon: 'i-simple-icons-tiktok', to: 'https://www.tiktok.com/@webcraftidng', label: 'TikTok' }
 ]

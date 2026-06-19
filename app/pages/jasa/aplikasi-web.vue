@@ -85,7 +85,7 @@
 
           <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <div class="h-14 w-14 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black flex items-center justify-center shadow-2xl overflow-hidden p-2">
-              <img src="/rakitweb.png" alt="RakitWeb Logo" class="w-full h-full object-contain" />
+              <img src="/NLFTs.png" alt="NLFTs Logo" class="w-full h-full object-contain" />
             </div>
           </div>
 

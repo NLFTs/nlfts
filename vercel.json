@@ -3,15 +3,42 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "server",          "value": "nginx/1.24.0 (Ubuntu)" },
-        { "key": "x-powered-by",    "value": "PHP/8.2.12" },
-        { "key": "via",             "value": "1.1 proxy.rakitweb.id (Varnish/7.4)" },
-        { "key": "x-cache",         "value": "HIT from proxy.rakitweb.id" },
-        { "key": "x-cache-hits",    "value": "3" },
-        { "key": "x-request-id",    "value": "rakitweb-proxy-001" },
-        { "key": "x-content-type-options", "value": "nosniff" },
-        { "key": "x-frame-options", "value": "SAMEORIGIN" },
-        { "key": "referrer-policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "server",
+          "value": "nginx/1.24.0 (Ubuntu)"
+        },
+        {
+          "key": "x-powered-by",
+          "value": "PHP/8.2.12"
+        },
+        {
+          "key": "via",
+          "value": "1.1 proxy.NLFTs.dev (Varnish/7.4)"
+        },
+        {
+          "key": "x-cache",
+          "value": "HIT from proxy.NLFTs.dev"
+        },
+        {
+          "key": "x-cache-hits",
+          "value": "3"
+        },
+        {
+          "key": "x-request-id",
+          "value": "NLFTs-proxy-001"
+        },
+        {
+          "key": "x-content-type-options",
+          "value": "nosniff"
+        },
+        {
+          "key": "x-frame-options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "referrer-policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     }
   ]

@@ -1,6 +1,6 @@
 # ============================================================
-# RakitWeb — robots.txt
-# https://rakitweb.id
+# NLFTs — robots.txt
+# https://NLFTs.dev
 # ============================================================
 
 # ── Default: izinkan semua ──────────────────────────────────
@@ -153,10 +153,10 @@ Disallow: /_nuxt/
 Disallow: /cdn-cgi/
 
 # ── Sitemap ──────────────────────────────────────────────────
-Sitemap: https://rakitweb.id/sitemap.xml
-Sitemap: https://rakitweb.id/sitemap-blog.xml
+Sitemap: https://NLFTs.dev/sitemap.xml
+Sitemap: https://NLFTs.dev/sitemap-blog.xml
 
 # ── RSS / Atom Feed ───────────────────────────────────────────
-# RSS  : https://rakitweb.id/rss.xml
-# Atom : https://rakitweb.id/atom.xml
-# Feed : https://rakitweb.id/feed.xml (redirect → rss.xml)
+# RSS  : https://NLFTs.dev/rss.xml
+# Atom : https://NLFTs.dev/atom.xml
+# Feed : https://NLFTs.dev/feed.xml (redirect → rss.xml)

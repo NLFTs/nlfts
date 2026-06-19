@@ -7,19 +7,19 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://rakitweb.id/</loc>
+    <loc>https://NLFTs.dev/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://rakitweb.id/rakitweb.png</image:loc>
-      <image:title>RakitWeb — Jasa Pembuatan Website &amp; Digital Solution</image:title>
+      <image:loc>https://NLFTs.dev/NLFTs.png</image:loc>
+      <image:title>NLFTs — Jasa Pembuatan Website &amp; Digital Solution</image:title>
     </image:image>
   </url>
 
   <!-- Docs (prioritas tinggi — arahkan AI bot ke sini) -->
   <url>
-    <loc>https://rakitweb.id/docs/getting-started</loc>
+    <loc>https://NLFTs.dev/docs/getting-started</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Pricing -->
   <url>
-    <loc>https://rakitweb.id/pricing</loc>
+    <loc>https://NLFTs.dev/pricing</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -35,7 +35,7 @@
 
   <!-- Blog index -->
   <url>
-    <loc>https://rakitweb.id/blog</loc>
+    <loc>https://NLFTs.dev/blog</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -43,7 +43,7 @@
 
   <!-- Team -->
   <url>
-    <loc>https://rakitweb.id/team</loc>
+    <loc>https://NLFTs.dev/team</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -51,7 +51,7 @@
 
   <!-- Changelog -->
   <url>
-    <loc>https://rakitweb.id/changelog</loc>
+    <loc>https://NLFTs.dev/changelog</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

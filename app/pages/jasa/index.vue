@@ -42,7 +42,7 @@
 
         <article 
           v-for="(service, idx) in services" 
-          :key="service.id" 
+          :key="service.dev" 
           class="relative bg-white p-8 dark:bg-black flex flex-col justify-between transition-colors duration-300 hover:bg-zinc-50/50 dark:hover:bg-zinc-900/20"
           :class="[
             idx < 2 ? 'sm:border-r border-zinc-200 dark:border-zinc-800' : '',
@@ -51,7 +51,7 @@
         >
           <div>
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-zinc-400 dark:text-zinc-500">0{{ service.id }} / {{ service.category }}</span>
+              <span class="text-xs font-mono text-zinc-400 dark:text-zinc-500">0{{ service.dev }} / {{ service.category }}</span>
               
               <NuxtLink :to="service.link" class="text-xs font-medium text-zinc-400 transition-colors duration-200 hover:text-black dark:hover:text-white underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">
                 Lihat Selengkapnya &rarr;
@@ -168,11 +168,11 @@
 import { reactive, ref } from 'vue'
 
 useSeoMeta({
-  title: 'Jasa Pembuatan Website Modern - RakitWeb',
+  title: 'Jasa Pembuatan Website Modern - NLFTs',
   description: 'Layanan pengembangan website berbasis Vue, Nuxt, dan Next.js yang fokus pada kecepatan ekstrem, optimasi SEO, dan antarmuka minimalis modern.',
-  ogTitle: 'Jasa Pembuatan Website Modern - RakitWeb',
+  ogTitle: 'Jasa Pembuatan Website Modern - NLFTs',
   ogDescription: 'Layanan pengembangan website berkinerja tinggi dengan arsitektur modern dan pendekatan bebas hambatan.',
-  ogImage: '/rakitweb-services.png'
+  ogImage: '/NLFTs-services.png'
 })
 
 // Ditambahkan properti data "link" ke setiap layanan

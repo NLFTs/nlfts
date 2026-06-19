@@ -502,7 +502,7 @@ onUnmounted(() => {
 
         <!-- Footer -->
         <div class="pt-4 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
-          <span>© RakitWeb 2026</span>
+          <span>© NLFTs 2026</span>
           <UColorModeButton size="xs" />
         </div>
       </div>

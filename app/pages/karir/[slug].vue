@@ -29,7 +29,7 @@
         <!-- Deskripsi Ringkas -->
         <section class="prose prose-zinc dark:prose-invert">
           <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed text-base">
-            Kami mencari {{ job.title }} berbakat untuk bergabung dengan tim inti RakitWeb. Anda akan bekerja secara remote dengan otonomi penuh untuk melahirkan sistem web berkinerja tinggi, bersih, dan andal.
+            Kami mencari {{ job.title }} berbakat untuk bergabung dengan tim inti NLFTs. Anda akan bekerja secara remote dengan otonomi penuh untuk melahirkan sistem web berkinerja tinggi, bersih, dan andal.
           </p>
         </section>
 
@@ -160,10 +160,10 @@ const job = computed(() => {
 // Mengatur SEO Meta Tag secara dinamis
 if (job.value) {
   useSeoMeta({
-    title: `${job.value.title} - Karir RakitWeb`,
-    description: `Gabung sebagai ${job.value.title} remote di RakitWeb. Fokus pada performa tinggi dan kode yang bersih.`,
-    ogTitle: `${job.value.title} - Karir RakitWeb`,
-    ogDescription: `Gabung sebagai ${job.value.title} remote di RakitWeb. Fokus pada performa tinggi dan kode yang bersih.`
+    title: `${job.value.title} - Karir NLFTs`,
+    description: `Gabung sebagai ${job.value.title} remote di NLFTs. Fokus pada performa tinggi dan kode yang bersih.`,
+    ogTitle: `${job.value.title} - Karir NLFTs`,
+    ogDescription: `Gabung sebagai ${job.value.title} remote di NLFTs. Fokus pada performa tinggi dan kode yang bersih.`
   })
 }
 </script>

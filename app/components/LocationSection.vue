@@ -5,9 +5,9 @@ const sectionRef = ref<HTMLElement | null>(null)
 
 const info = {
   address: "Semarang, Jawa Tengah, Indonesia",
-  email: "rakitweb.nlfts.dev",
+  email: "NLFTs.nlfts.dev",
   phone: "+62 851-8715-3883",
-  instagram: "@rakitweb",
+  instagram: "@NLFTs",
   meta: [
     { label: "Region", value: "Jawa Tengah, ID" },
     { label: "Zone", value: "GMT+7 (Jakarta)" },
@@ -96,7 +96,7 @@ const onMouseLeave = (el: HTMLElement) => {
                 <a :href="'mailto:' + info.email" class="text-[11px] font-black uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ info.email }}</a>
                 <a :href="'https://wa.me/6283160325595'" target="_blank" class="text-[11px] font-black uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors">{{ info.phone }}</a>
              </div>
-             <a href="https://www.instagram.com/rakitweb_id" target="_blank" class="text-[15px] font-black text-gray-500">Instagram :  @rakitweb_id</a>
+             <a href="https://www.instagram.com/NLFTs_id" target="_blank" class="text-[15px] font-black text-gray-500">Instagram :  @NLFTs_id</a>
           </div>
         </div>
 
@@ -123,7 +123,7 @@ const onMouseLeave = (el: HTMLElement) => {
               
               <!-- Subtle UI Overlays -->
               <div class="absolute bottom-10 left-10 p-6 bg-white dark:bg-[#0F0F0F] border border-gray-100 dark:border-white/10 rounded-3xl shadow-2xl z-10 hidden md:block">
-                <div class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Lokasi RakitWeb</div>
+                <div class="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Lokasi NLFTs</div>
                 <div class="text-[11px] font-mono text-primary-500">Semarang, Jawa Tengah</div>
               </div>
             </div>

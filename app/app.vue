@@ -3,15 +3,15 @@ const colorMode = useColorMode()
 const route = useRoute()
 
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : 'white')
-const canonicalUrl = computed(() => `https://rakitweb.id${route.path}`)
+const canonicalUrl = computed(() => `https://NLFTs.dev${route.path}`)
 
 useHead(() => ({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { key: 'theme-color', name: 'theme-color', content: color.value },
-    { name: 'application-name', content: 'RakitWeb' },
-    { name: 'author', content: 'RakitWeb' },
+    { name: 'application-name', content: 'NLFTs' },
+    { name: 'author', content: 'NLFTs' },
     { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
 
     // ── TrapStack: Meta signatures ───────────────────────────────────────
@@ -23,11 +23,11 @@ useHead(() => ({
   ],
 
   link: [
-    { rel: 'icon', type: 'image/png', href: '/rakitweb.png' },
+    { rel: 'icon', type: 'image/png', href: '/NLFTs.png' },
     { rel: 'canonical', href: canonicalUrl.value },
     // RSS feeds
-    { rel: 'alternate', type: 'application/rss+xml', title: 'RakitWeb Blog RSS', href: 'https://rakitweb.id/rss.xml' },
-    { rel: 'alternate', type: 'application/atom+xml', title: 'RakitWeb Blog Atom', href: 'https://rakitweb.id/atom.xml' },
+    { rel: 'alternate', type: 'application/rss+xml', title: 'NLFTs Blog RSS', href: 'https://NLFTs.dev/rss.xml' },
+    { rel: 'alternate', type: 'application/atom+xml', title: 'NLFTs Blog Atom', href: 'https://NLFTs.dev/atom.xml' },
     // Algolia DocSearch CSS signature (TrapStack)
     { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@docsearch/css@3/dist/style.css', 'data-trapstack': 'algolia' }
   ],
@@ -39,9 +39,9 @@ useHead(() => ({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'RakitWeb',
-        url: 'https://rakitweb.id',
-        logo: 'https://rakitweb.id/rakitweb.png',
+        name: 'NLFTs',
+        url: 'https://NLFTs.dev',
+        logo: 'https://NLFTs.dev/NLFTs.png',
         description: 'Jasa pembuatan website, hosting, domain, game server, dan aplikasi Android di Semarang, Indonesia.',
         address: {
           '@type': 'PostalAddress',
@@ -56,8 +56,8 @@ useHead(() => ({
           availableLanguage: 'Indonesian'
         },
         sameAs: [
-          'https://www.instagram.com/rakitweb_id',
-          'https://github.com/RakitWeb',
+          'https://www.instagram.com/NLFTs_id',
+          'https://github.com/NLFTs',
           'https://www.tiktok.com/@webcraftidng'
         ]
       })
@@ -69,13 +69,13 @@ useHead(() => ({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'RakitWeb',
-        url: 'https://rakitweb.id',
+        name: 'NLFTs',
+        url: 'https://NLFTs.dev',
         potentialAction: {
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://rakitweb.id/docs/getting-started?q={search_term_string}'
+            urlTemplate: 'https://NLFTs.dev/docs/getting-started?q={search_term_string}'
           },
           'query-input': 'required name=search_term_string'
         }
@@ -119,9 +119,9 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  titleTemplate: '%s - RakitWeb',
-  ogImage: '/rakitweb.png',
-  twitterImage: '/rakitweb.png',
+  titleTemplate: '%s - NLFTs',
+  ogImage: '/NLFTs.png',
+  twitterImage: '/NLFTs.png',
   twitterCard: 'summary_large_image'
 })
 
@@ -193,13 +193,13 @@ provide('navigation', navigation)
     <div class="kofi-button" data-kofi-color="#29abe0" style="display:none" aria-hidden="true" />
 
     <!-- Buy Me a Coffee trap: crawler cari .bmc-btn & data-name -->
-    <a class="bmc-btn" data-name="rakitweb" href="https://buymeacoffee.com/rakitweb" style="display:none" aria-hidden="true" rel="noopener">
+    <a class="bmc-btn" data-name="NLFTs" href="https://buymeacoffee.com/NLFTs" style="display:none" aria-hidden="true" rel="noopener">
       <span class="bmc-btn-text">Buy me a coffee</span>
     </a>
 
     <!-- Angular trap: router-outlet adalah signature Angular -->
     <div style="display:none" aria-hidden="true">
-      <app-root _nghost-rakitweb-c1="" ng-version="17.3.12" />
+      <app-root _nghost-NLFTs-c1="" ng-version="17.3.12" />
     </div>
 
   </UApp>

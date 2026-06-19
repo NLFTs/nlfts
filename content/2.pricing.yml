@@ -1,8 +1,8 @@
-title: Paket Harga RakitWeb
+title: Paket Harga NLFTs
 description: Pilih paket yang sesuai kebutuhan bisnis Anda. Harga transparan, tanpa biaya tersembunyi.
 seo:
-  title: Harga product - RakitWeb
-  description: Lihat paket harga jasa website, hosting, game server, dan aplikasi Android dari RakitWeb.
+  title: Harga product - NLFTs
+  description: Lihat paket harga jasa website, hosting, game server, dan aplikasi Android dari NLFTs.
 navigation.icon: i-lucide-credit-card
 plans:
   - title: Website Starter
@@ -78,5 +78,5 @@ faq:
       content: Paket Starter mulai Rp350.000 sekali bayar (5-10 halaman + hosting + domain). Paket Pro mulai Rp1.500.000 dengan fitur lengkap. Konsultasi gratis untuk custom project.
     - label: Apakah bisa revisi desain?
       content: Tentu! Paket Starter sudah termasuk 2x revisi gratis. Paket Pro revisi tidak terbatas selama masa pengerjaan.
-    - label: Apakah sudah termasuk domain bisnis (.com, .id) dan server?
+    - label: Apakah sudah termasuk domain bisnis (.com, .dev) dan server?
       content: Paket Starter dan Pro sudah termasuk hosting dan domain selama 1 tahun. Untuk Paket Hosting & Domain, kami bantu setup di hosting pilihan Anda.

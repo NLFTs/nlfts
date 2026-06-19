@@ -162,7 +162,7 @@ onMounted(async () => {
             </h2>
             
             <p class="text-split text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-lg leading-relaxed font-medium opacity-80">
-              Butuh aplikasi Android untuk bisnis Anda? RakitWeb mengerjakan custom app sesuai kebutuhan — dari konsep hingga publish di Play Store, dengan harga terjangkau.
+              Butuh aplikasi Android untuk bisnis Anda? NLFTs mengerjakan custom app sesuai kebutuhan — dari konsep hingga publish di Play Store, dengan harga terjangkau.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ onMounted(async () => {
 
           <div class="text-split pt-4">
             <NuxtLink 
-              to="https://wa.me/6285187153883?text=Halo%20RakitWeb%2C%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20Android" 
+              to="https://wa.me/6285187153883?text=Halo%20NLFTs%2C%20saya%20ingin%20konsultasi%20pembuatan%20aplikasi%20Android" 
               target="_blank"
               class="group relative inline-flex items-center gap-5 px-10 py-5 bg-gray-950 dark:bg-white text-white dark:text-gray-950 rounded-[20px] transition-all active:scale-95 overflow-hidden"
             >

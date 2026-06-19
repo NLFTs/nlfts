@@ -11,19 +11,19 @@ const sectionRef = ref<HTMLElement | null>(null)
 const testimonials = [
   { 
     name: "Ihsan, Owner Ruang Berita", role: "",
-    content: "Kami order website berita ke RakitWeb, hasil nya mantap! terutama untuk server nya lancar jaya", 
+    content: "Kami order website berita ke NLFTs, hasil nya mantap! terutama untuk server nya lancar jaya", 
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ihsan", 
     isDark: true, logo: "i-lucide-globe" 
   },
   { 
     name: "Rina Wulandari", role: "Pemilik UMKM Fashion, Semarang", 
-    content: "RakitWeb bantu setup toko online kami dari nol. Sekarang omzet naik karena pelanggan bisa order online 24 jam. Tim-nya ramah dan responsif.", 
+    content: "NLFTs bantu setup toko online kami dari nol. Sekarang omzet naik karena pelanggan bisa order online 24 jam. Tim-nya ramah dan responsif.", 
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rina", 
     isDark: false 
   },
   { 
     name: "Agus Prasetyo", role: "Owner Server Minecraft Indonesia", 
-    content: "Game server Minecraft kami di-setup sama RakitWeb, performanya stabil banget! Maintenance juga full, jadi kami tinggal main aja.", 
+    content: "Game server Minecraft kami di-setup sama NLFTs, performanya stabil banget! Maintenance juga full, jadi kami tinggal main aja.", 
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Agus", 
     isDark: false 
   },
@@ -41,13 +41,13 @@ const testimonials = [
   },
   { 
     name: "Sari Indah", role: "Pemilik Klinik Kecantikan, Semarang", 
-    content: "Landing page kami dibuat menarik dan konversinya tinggi. Banyak pelanggan baru yang datang dari hasil promosi pakai landing page RakitWeb.", 
+    content: "Landing page kami dibuat menarik dan konversinya tinggi. Banyak pelanggan baru yang datang dari hasil promosi pakai landing page NLFTs.", 
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sari", 
     isDark: false 
   },
   { 
     name: "Rizky Firmansyah", role: "Admin Server CS:GO Community", 
-    content: "Server CS:GO kami di-handle penuh sama RakitWeb. Dari setup sampai maintenance, semua beres. Owner tinggal fokus komunitas, server aman.", 
+    content: "Server CS:GO kami di-handle penuh sama NLFTs. Dari setup sampai maintenance, semua beres. Owner tinggal fokus komunitas, server aman.", 
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rizky", 
     isDark: true, logo: "i-lucide-server" 
   }

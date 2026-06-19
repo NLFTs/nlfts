@@ -8,7 +8,7 @@ if (process.client) {
 
 const sectionRef = ref<HTMLElement | null>(null)
 
-// product Unggulan RakitWeb
+// product Unggulan NLFTs
 const features = [
   {
     title: 'Jasa Pembuatan Website',
@@ -29,7 +29,7 @@ const features = [
 
 const socials = [
   { icon: 'i-simple-icons-whatsapp', link: 'https://wa.me/6283160325595' },
-  { icon: 'i-simple-icons-instagram', link: 'https://www.instagram.com/rakitweb_id' },
+  { icon: 'i-simple-icons-instagram', link: 'https://www.instagram.com/NLFTs_id' },
   { icon: 'i-simple-icons-tiktok', link: 'https://www.tiktok.com/@webcraftidng' }
 ]
 
@@ -90,7 +90,7 @@ onMounted(async () => {
 
           <div class="reveal space-y-6">
             <p class="text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
-              RakitWeb hadir sebagai mitra digital terpercaya untuk bisnis Anda — dari pembuatan website, setup server, hingga game server dan aplikasi Android dengan harga yang bersahabat.
+              NLFTs hadir sebagai mitra digital terpercaya untuk bisnis Anda — dari pembuatan website, setup server, hingga game server dan aplikasi Android dengan harga yang bersahabat.
             </p>
             
             <div class="pt-4 flex items-center justify-between">

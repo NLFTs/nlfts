@@ -144,7 +144,7 @@
       <div class="mx-auto max-w-5xl px-6 pb-4">
         <div class="text-sm font-mono text-zinc-500 dark:text-zinc-400 mb-2">Debug Logos — original SVGs</div>
         <div class="flex items-center gap-4">
-          <img src="/rakitweb.png" alt="RakitWeb" class="h-10 w-auto" />
+          <img src="/NLFTs.png" alt="NLFTs" class="h-10 w-auto" />
           <img src="https://cdn.simpleicons.org/nuxtdotjs/00DC82" alt="Nuxt.js" class="h-10 w-auto" />
           <img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="NestJS" class="h-10 w-auto" />
           <img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="Next.js" class="h-10 w-auto bg-white/0" />

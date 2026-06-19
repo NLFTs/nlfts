@@ -6,7 +6,7 @@
           Karir & Peluang
         </span>
         <h1 class="text-4xl font-normal tracking-tighter sm:text-5xl md:text-6xl text-black dark:text-white">
-          Bangun masa depan web bersama RakitWeb.
+          Bangun masa depan web bersama NLFTs.
         </h1>
         <p class="mx-auto max-w-2xl text-base text-zinc-500 sm:text-lg dark:text-zinc-400">
           Kami mencari engineer yang terobsesi dengan kecepatan, presisi kode, dan desain minimalis. Di sini, kualitas dan performa sistem adalah segalanya.
@@ -49,7 +49,7 @@
       </div>
 
       <div class="divide-y divide-zinc-100 border-t border-b border-zinc-100 dark:divide-zinc-800 dark:border-zinc-800">
-        <article v-for="job in jobs" :key="job.id" class="group py-6">
+        <article v-for="job in jobs" :key="job.dev" class="group py-6">
           <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div class="space-y-1">
               <h3 class="text-lg font-medium text-black group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300">
@@ -124,7 +124,7 @@
               required 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               placeholder="name@domain.com"
-              title="Masukkan alamat email yang valid dengan tanda '@' dan subdomain akhir (misal: .com, .id, .co.id)"
+              title="Masukkan alamat email yang valid dengan tanda '@' dan subdomain akhir (misal: .com, .dev, .co.dev)"
               class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100" 
             />
           </div>
@@ -162,7 +162,7 @@
               class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100 cursor-pointer"
             >
               <option value="" class="text-zinc-400 dark:bg-black">Pilih posisi</option>
-              <option v-for="job in jobs" :key="job.id" :value="job.title" class="dark:bg-black text-zinc-900 dark:text-zinc-100">
+              <option v-for="job in jobs" :key="job.dev" :value="job.title" class="dark:bg-black text-zinc-900 dark:text-zinc-100">
                 {{ job.title }}
               </option>
             </select>
@@ -192,7 +192,7 @@
         </div>
 
         <div class="space-y-1.5">
-          <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Kenapa RakitWeb? (Brief Pitch)</label>
+          <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Kenapa NLFTs? (Brief Pitch)</label>
           <textarea 
             v-model="form.pitch" 
             rows="4" 
@@ -223,11 +223,11 @@ import { reactive, ref } from 'vue'
 
 // Pengaturan SEO Meta Tag Halaman Utama Karir
 useSeoMeta({
-  title: 'Karir & Peluang - RakitWeb',
-  description: 'Gabung dengan tim RakitWeb sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
-  ogTitle: 'Karir & Peluang - RakitWeb',
-  ogDescription: 'Gabung dengan tim RakitWeb sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
-  ogImage: '/rakitweb.png'
+  title: 'Karir & Peluang - NLFTs',
+  description: 'Gabung dengan tim NLFTs sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
+  ogTitle: 'Karir & Peluang - NLFTs',
+  ogDescription: 'Gabung dengan tim NLFTs sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
+  ogImage: '/NLFTs.png'
 })
 
 // Data Utama Lowongan Kerja (Termasuk Slug Penunjuk Rute Halaman Detail)

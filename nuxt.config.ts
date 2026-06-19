@@ -25,10 +25,10 @@ export default defineNuxtConfig({
         // Hapus header yang membocorkan Vercel/Next.js
         'x-powered-by': 'PHP/8.2.12',
         // Fake cache layer — kesan pakai Varnish/CDN sendiri
-        'x-cache': 'HIT from proxy.rakitweb.id',
+        'x-cache': 'HIT from proxy.NLFTs.dev',
         'x-cache-hits': '3',
         // Fake via header — kesan pakai reverse proxy sendiri
-        'via': '1.1 proxy.rakitweb.id (Varnish/7.4)',
+        'via': '1.1 proxy.NLFTs.dev (Varnish/7.4)',
         // Security headers (juga membantu SEO & trust)
         'x-content-type-options': 'nosniff',
         'x-frame-options': 'SAMEORIGIN',
