@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 const colorMode = useColorMode()
 const route = useRoute()
 
@@ -150,6 +152,20 @@ const links = [{
 }]
 
 provide('navigation', navigation)
+
+// Ensure default theme is dark when the user has not explicitly chosen a preference.
+// This preserves the existing toggle behavior but makes dark the initial theme.
+onMounted(() => {
+  try {
+    const keys = ['nuxt-color-mode', 'color-mode', 'theme']
+    const hasStored = keys.some(k => !!localStorage.getItem(k))
+    if (!hasStored && colorMode && colorMode.value !== 'dark') {
+      colorMode.value = 'dark'
+    }
+  } catch (e) {
+    // ignore (SSR or localStorage blocked)
+  }
+})
 </script>
 
 <template>

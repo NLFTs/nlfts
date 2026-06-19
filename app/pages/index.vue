@@ -236,7 +236,7 @@ onUnmounted(() => {
 <template>
 <main>
   <div class="relative overflow-hidden selection:bg-emerald-500/30 pb-32">
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-600 via-orange-500 to-black z-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-orange-400 to-black z-0"></div>
     <div class="absolute inset-0 -bottom-40 z-[1] bg-[url('/images/gunung-transpert.png')] bg-cover bg-center bg-no-repeat"></div>
 
     <div class="relative z-10 pt-12 md:pt-16 pb-2">
