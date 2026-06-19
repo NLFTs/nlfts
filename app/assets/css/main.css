@@ -31,3 +31,20 @@
   --ui-container: 1600px;
 }
 
+/* Light-mode overrides: replace 'white' surfaces with Mint Haze #f8fbf8
+   This targets common Tailwind utility classes that include 'bg-white'
+   and forces the background to the desired color when not in .dark mode. */
+html:not(.dark) {
+  --mint-haze: #ffffff;
+}
+
+html:not(.dark) [class*="bg-white"] {
+  background-color: var(--mint-haze) !important;
+}
+
+/* Buttons or elements that use explicit rgba variants like bg-white/90
+   will be matched by the attribute selector above because the class
+   name string contains 'bg-white'. The !important ensures the new
+   color takes precedence in the light theme. */
+
+
