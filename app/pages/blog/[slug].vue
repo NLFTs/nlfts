@@ -21,18 +21,10 @@ useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
+  ogImage: '/NLFTs.png',
+  twitterImage: '/NLFTs.png'
 })
-
-if (post.value.image?.src) {
-  defineOgImage({
-    url: post.value.image.src
-  })
-} else {
-  defineOgImageComponent('Saas', {
-    headline: 'Blog'
-  })
-}
 </script>
 
 <template>

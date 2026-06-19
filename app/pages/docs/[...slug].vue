@@ -23,10 +23,10 @@ useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
+  ogImage: '/NLFTs.png',
+  twitterImage: '/NLFTs.png'
 })
-
-defineOgImageComponent('Saas')
 </script>
 
 <template>

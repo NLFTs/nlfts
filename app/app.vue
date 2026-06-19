@@ -128,9 +128,7 @@ useSeoMeta({
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
   transform: data => data.find(item => item.path === '/docs')?.children || []
 })
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
-  server: false
-})
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'))
 const isSearchOpen = useState('search-open', () => false)
 
 const links = [{

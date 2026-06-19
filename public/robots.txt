@@ -49,27 +49,23 @@ Allow: /
 
 # ── AI Crawlers — Claude (Anthropic) ────────────────────────
 User-agent: ClaudeBot
-Allow: /
-Allow: /docs/
+Disallow: /
 
 User-agent: anthropic-ai
-Allow: /
-Allow: /docs/
+Disallow: /
 
 User-agent: Claude-Web
-Allow: /
+Disallow: /
 
 # ── AI Crawlers — ChatGPT (OpenAI) ──────────────────────────
 User-agent: GPTBot
-Allow: /
-Allow: /docs/
+Disallow: /
 
 User-agent: ChatGPT-User
-Allow: /
-Allow: /docs/
+Disallow: /
 
 User-agent: OAI-SearchBot
-Allow: /
+Disallow: /
 
 # ── AI Crawlers — Deepseek ───────────────────────────────────
 User-agent: DeepSeek
