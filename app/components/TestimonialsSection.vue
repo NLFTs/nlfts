@@ -118,31 +118,105 @@
 import { computed } from 'vue'
 
 const testimonials = [
-  // Col 0
-  { id: 1,  col: 0, name: 'Simon Hamp',      role: 'Co-founder of Native PHP',              avatar: 'https://i.pravatar.cc/80?img=11', text: `<strong>We wouldn't have been able to build NativePHP or Bifrost without Forge.</strong> It allowed us to forget about hosting so we could focus on making awesome products.` },
-  { id: 2,  col: 0, name: 'Dan Johnson',     role: 'Head of Engineering at TRYBE',          avatar: 'https://i.pravatar.cc/80?img=12', text: `Using Forge is a no brainer – it lets me spend more time building a product and less time managing servers.` },
-  { id: 3,  col: 0, name: 'Layla Chen',      role: 'CTO at Brightloop',                     avatar: 'https://i.pravatar.cc/80?img=9',  text: `Forge made our entire DevOps pipeline disappear. We ship faster and sleep better knowing our infrastructure is handled.` },
+// Col 0
+{
+id: 1,
+col: 0,
+name: 'Lintang Wijaya',
+role: 'Pemilik Group besar Kota Jaya',
+avatar: 'https://avatars.githubusercontent.com/u/216552062?s=130&v=4',
+text: `<strong>NLFTs mengubah cara saya memandang pengembangan perangkat lunak.</strong> Fokusnya bukan sekadar menyelesaikan masalah, tetapi membangun solusi yang modern, scalable, dan berkelanjutan.`
+},
+{
+id: 2,
+col: 0,
+name: 'Rehan Ramdhan',
+role: 'Kontributor Open Source',
+avatar: 'https://avatars.githubusercontent.com/u/218329504?s=130&v=4',
+text: `Bergabung dengan NLFTs mempertemukan saya dengan developer yang memiliki visi yang sama. Diskusi yang terjadi selalu relevan dengan teknologi terbaru dan kebutuhan industri saat ini.`
+},
+{
+id: 3,
+col: 0,
+name: 'Naufal Hidayat',
+role: 'Full Stack Engineer',
+avatar: 'https://i.pravatar.cc/80?img=9',
+text: `Di sini saya menemukan lingkungan yang mendorong saya untuk terus berkembang. Setiap anggota memiliki semangat untuk belajar, membangun, dan berbagi pengalaman teknis tingkat lanjut.`
+},
 
-  // Col 1
-  { id: 4,  col: 1, name: 'Nolan Nordlund',  role: 'Founder of Project Rebel',             avatar: 'https://i.pravatar.cc/80?img=14', text: `<strong>Forge has made deploying apps so simple and easy.</strong> Once I have a project installed, I just need a tiny GitHub Action to get code from my machine to the live website in about 30 seconds. Magical.` },
-  { id: 5,  col: 1, name: 'Herman Schutte',  role: 'Founder of SiteSpeakAI',               avatar: 'https://i.pravatar.cc/80?img=15', text: `Been using Forge to manage 60+ server instances for the past 10 years. <strong>Can't imagine using anything else to provision, deploy, and manage all my apps' infrastructure.</strong> As a solo founder, it's a must-have!` },
-  { id: 6,  col: 1, name: 'Michael LaRoy',   role: 'Lead Developer at Stackd',              avatar: 'https://i.pravatar.cc/80?img=7',  text: `I switched three clients to Forge-managed infrastructure last year. Every single one of them thanked me. Setup is ridiculously smooth.` },
+// Col 1
+{
+id: 4,
+col: 1,
+name: 'Rizky Ms',
+role: 'Nuxt Engineer',
+avatar: 'https://avatars.githubusercontent.com/u/230048582?s=130&v=4  ',
+text: `<strong>NLFTs bukan sekadar komunitas, tetapi tempat berkumpulnya developer yang serius mengembangkan kemampuan mereka.</strong> Mulai dari NestJS, Spring, Go, hingga arsitektur sistem modern selalu menjadi topik yang menarik untuk dibahas.`
+},
+{
+id: 5,
+col: 1,
+name: 'Miftah Aufar',
+role: 'Spring Architect',
+avatar: 'https://avatars.githubusercontent.com/u/232498018?s=130&v=4',
+text: `Yang membuat NLFTs berbeda adalah budaya open source yang kuat. Anggotanya aktif berkontribusi pada ekosistem Nuxt sekaligus mengembangkan framework dan tooling internal sendiri.`
+},
 
-  // Col 2 — center
-  { id: 7,  col: 2, name: 'Alex MacArthur',  role: 'Sr. Software Engineer at Ramsey',      avatar: 'https://i.pravatar.cc/80?img=3',  text: `<strong>Forge is one of those services you couldn't pay me to leave.</strong> The fact that I can offload the cognitive overhead of server management with such a great user experience for just a few bucks a month is still bonkers to me.` },
-  { id: 8,  col: 2, name: 'Mike Elghali',    role: 'CTO at CEGELEM',                       avatar: 'https://i.pravatar.cc/80?img=4',  text: `I've been using Forge since 2016 across 2 French startups with zero issues. <strong>It allowed me to focus entirely on technical development without worrying about server administration and networking.</strong> Huge time saver and peace of mind.` },
-  { id: 9,  col: 2, name: 'Sophie Vance',    role: 'Backend Engineer at Lumen',            avatar: 'https://i.pravatar.cc/80?img=5',  text: `There's no going back once you've felt the difference. Forge took our deployment from an afternoon chore to a single command. Genuinely remarkable product.` },
+// Col 2
+{
+id: 7,
+col: 2,
+name: 'Nairha',
+role: 'Founder NLFTs',
+avatar: 'https://avatars.githubusercontent.com/u/204519754?s=130&v=4',
+text: `<strong>NLFTs dibangun untuk developer yang ingin terus berkembang dan berada di garis depan teknologi.</strong> Kami tidak berfokus pada pembelajaran dasar, tetapi pada eksplorasi teknologi modern, kontribusi open source, dan pengembangan solusi nyata untuk industri.`
+},
+{
+id: 8,
+col: 2,
+name: 'Reyhan',
+role: 'Kontributor Nuxt',
+avatar: 'https://avatars.githubusercontent.com/u/202130049?s=130&v=4',
+text: `Budaya belajar di NLFTs sangat positif. Semua anggota saling mendorong untuk berkontribusi, bereksperimen, dan menciptakan sesuatu yang bermanfaat bagi komunitas maupun industri.`
+},
 
-  // Col 3
-  { id: 10, col: 3, name: 'Sam Berry',       role: 'Managing Partner at 25Digital',        avatar: 'https://i.pravatar.cc/80?img=16', text: `As a developer, I've never been fully confident managing servers and security. <strong>Laravel Forge takes away that uncertainty, it handles the hard parts and gives me the confidence to deploy safely,</strong> so I can focus on writing code and delivering projects.` },
-  { id: 11, col: 3, name: 'Wendell Adriel',  role: 'Engineering Manager at TrackStreet',   avatar: 'https://i.pravatar.cc/80?img=17', text: `Migrated two websites in less than 30 minutes using Forge and Laravel VPS. Most of the time was spent just waiting for DNS propagation and SSL certificates. Just a few clicks here and there, and everything was just working!` },
-  { id: 12, col: 3, name: 'Reza Ahmadi',     role: 'Full Stack Developer',                 avatar: 'https://i.pravatar.cc/80?img=18', text: `Forge gave me back my weekends. Server management used to eat up my Saturdays — now it's a non-issue. My clients get faster deployments and I get my life back.` },
+// Col 3
+{
+id: 10,
+col: 3,
+name: 'Radietya Pratama',
+role: 'Fonder Prataryn Enterpise',
+avatar: 'https://avatars.githubusercontent.com/u/226198461?s=130&v=4',
+text: `Meskipun berpusat di Bandung, NLFTs membuka kesempatan bagi developer dari seluruh Indonesia untuk terhubung, berkolaborasi, dan berkembang bersama.`
+},
+{
+id: 11,
+col: 3,
+name: 'Destkaa',
+role: 'DevOps Engineer',
+avatar: 'https://avatars.githubusercontent.com/u/228332586?s=130&v=4',
+text: `<strong>Di sini tidak ada fokus pada materi dasar.</strong> NLFTs ditujukan bagi mereka yang ingin memperdalam teknologi modern, memahami arsitektur tingkat lanjut, dan mengikuti perkembangan industri secara aktif.`
+},
+// Col 4
+{
+id: 13,
+col: 4,
+name: 'Marsha Bara',
+role: 'Technical Lead',
+avatar: 'https://avatars.githubusercontent.com/u/228843429?s=130&v=4',
+text: `<strong>NLFTs memiliki visi yang jelas: membangun ekosistem teknologi modern dan berkontribusi terhadap perkembangan open source.</strong> Itu yang membuat saya bangga menjadi bagian dari komunitas ini.`
+},
+{
+id: 14,
+col: 4,
+name: 'Fakhri Ibnu Nabil',
+role: 'Frontend Specialist',
+avatar: 'https://avatars.githubusercontent.com/u/228840381?s=130&v=4',
+text: `Saya bergabung karena tertarik dengan Nuxt, tetapi bertahan karena kualitas anggota dan diskusi yang luar biasa. Setiap pertemuan selalu memberikan perspektif baru.`
+},
 
-  // Col 4
-  { id: 13, col: 4, name: 'Camilo Martinez', role: 'Owner of Somnio Technology Solutions', avatar: 'https://i.pravatar.cc/80?img=19', text: `I moved away from managing load balancers, setting PHP isolation, Nginx configuration, and Docker images to start using Forge. <strong>Best decision ever, my deployment time went from 5–10 minutes to under 1 minute.</strong>` },
-  { id: 14, col: 4, name: 'John Champ',      role: 'Founder of Pixelcave',                 avatar: 'https://i.pravatar.cc/80?img=20', text: `With Forge, I don't worry about managing my servers. I just focus on growing my online business.` },
-  { id: 15, col: 4, name: 'Anya Torres',     role: 'Product Engineer at Nimble',           avatar: 'https://i.pravatar.cc/80?img=6',  text: `Zero regrets. Forge is one of those rare tools that just disappears into your workflow and makes everything feel effortless. Highly recommended.` },
 ]
+
 
 const columns = computed(() => {
   const cols = [[], [], [], [], []]

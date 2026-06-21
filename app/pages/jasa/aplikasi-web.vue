@@ -1,133 +1,132 @@
+Tentu, ini adalah halaman "About Us" yang dirancang untuk melengkapi halaman "Aplikasi Web" yang Anda berikan.
+
+Halaman ini menggunakan **Vue 3 (Composition API)** dan **Tailwind CSS**. Desainnya sepenuhnya sinkron dengan tema Anda: **ultra-minimalis, tech-forward, high-contrast** (murni hitam dan putih), serta menggunakan grid yang ketat, tipografi besar, dan detail teknis seperti ikon mono dan garis pemisah tipis.
+
+```vue
 <template>
-  <div class="min-h-screen bg-white dark:bg-black text-zinc-950 dark:text-white antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800">
+  <div class="min-h-screen bg-white dark:bg-black text-zinc-950 dark:text-white antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800 font-sans">
     
-    <section class="w-full bg-white dark:bg-black text-zinc-950 dark:text-white px-8 pt-32 pb-12 antialiased">
+    <header class="w-full px-8 pt-32 pb-20 border-b border-zinc-200 dark:border-zinc-900">
       <div class="mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
         
-        <div class="lg:col-span-7">
-          <h1 class="text-[44px] sm:text-[64px] font-bold tracking-tight leading-[1.02] text-zinc-950 dark:text-white">
-            Aplikasi Web<br />yang berdampak.
+        <div class="lg:col-span-8">
+          <div class="flex items-center gap-2 text-xs font-mono text-zinc-400 dark:text-zinc-500 mb-6 uppercase tracking-widest">
+            <span>//</span> MANIFESTO KAMI
+          </div>
+          
+          <h1 class="text-[44px] sm:text-[64px] lg:text-[80px] font-bold tracking-tight leading-[1.0] text-zinc-950 dark:text-white mb-10">
+            Arsitek<br />Sistem<br />Modern.
           </h1>
         </div>
 
-        <div class="lg:col-span-5 space-y-6 lg:pt-4">
-          <p class="text-[15px] sm:text-[17px] leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-md font-normal">
-            Sistem aplikasi berbasis web yang dinamis untuk kebutuhan operasional spesifik, dasbor internal, sistem manajemen data, atau portal SaaS.
+        <div class="lg:col-span-4 space-y-6 lg:pt-20">
+          <p class="text-[16px] sm:text-[18px] leading-relaxed text-zinc-700 dark:text-zinc-300 max-w-md font-normal">
+            Kami bukan sekadar pengembang; kami adalah mitra strategis yang menerjemahkan ambisi bisnis menjadi infrastruktur digital yang tangguh, efisien, dan siap menghadapi masa depan.
           </p>
-          
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <button class="inline-flex h-11 items-center gap-2 rounded-full bg-zinc-950 dark:bg-white px-5 text-sm font-medium text-white dark:text-black transition-colors duration-200 hover:bg-zinc-800 dark:hover:bg-zinc-200">
-              <svg class="h-3 w-3 fill-current" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="50,15 90,85 10,85" />
-              </svg>
-              <span>Mulai Keberangkatan</span>
-            </button>
-
-            <button class="inline-flex h-11 items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A] px-5 text-sm font-medium text-zinc-900 dark:text-white transition-colors duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-900">
-              Lihat Demo
-            </button>
-          </div>
         </div>
 
       </div>
-    </section>
+    </header>
 
-    <section class="mx-auto max-w-[1600px] grid grid-cols-1 lg:grid-cols-12 border-b border-zinc-200 dark:border-zinc-900 divide-y lg:divide-y-0 lg:divide-x divide-zinc-200 dark:divide-zinc-900">
+    <section class="mx-auto max-w-[1600px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-zinc-200 dark:border-zinc-900 divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-900">
       
-      <div class="p-12 lg:py-16 lg:col-span-4 space-y-4 flex flex-col justify-center">
-        <div class="flex items-center gap-2 text-xs font-mono text-zinc-400 dark:text-zinc-500">
-          <span>⚙️</span> Infrastruktur Aplikasi
+      <div class="p-12 space-y-4">
+        <div class="h-10 w-10 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A]">
+          <UIcon name="i-heroicons-bolt" class="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
         </div>
-        <h2 class="text-4xl font-semibold tracking-tight leading-tight text-zinc-950 dark:text-white">
-          Kendali penuh atas arsitektur sistem Anda.
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-white pt-2">
+          Performa Tanpa Kompromi
         </h2>
         <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          Kombinasi fleksibel antara ketangguhan ekosistem backend modern dan kebebasan kerangka kerja frontend mutakhir. Menjamin skalabilitas alur kerja dari manajemen data hingga skalabilitas fungsional operasional.
+          Setiap baris kode dioptimalkan untuk kecepatan dan efisiensi. Kami membangun sistem yang tidak hanya berfungsi, tetapi juga merespons secara instan di bawah beban kerja tinggi.
         </p>
       </div>
 
-      <div class="p-12 lg:py-16 lg:col-span-8 flex flex-col justify-center space-y-8 bg-zinc-50 dark:bg-[#020202]">
-        <h3 class="text-xl font-normal text-zinc-600 dark:text-zinc-400">
-          <strong class="text-zinc-950 dark:text-white font-medium">Teknologi handal berstandar industri.</strong> Dibangun dengan struktur yang terukur demi kestabilan performa aplikasi sesuai kebutuhan bisnis Anda.
-        </h3>
-
-        <div class="w-full max-w-2xl mx-auto pt-6 relative flex items-center justify-between h-[240px]">
-          
-          <div class="flex flex-col justify-between h-full z-10 w-44 relative">
-            <div class="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black px-4 h-11 text-xs font-mono text-zinc-800 dark:text-zinc-300 shadow-sm">
-              <UIcon name="i-simple-icons-nestjs" class="h-4 w-4 shrink-0" style="color: #E0234E;" />
-              <span>Arsitektur API</span>
-            </div>
-            <div class="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black px-4 h-11 text-xs font-mono text-zinc-800 dark:text-zinc-300 shadow-sm">
-              <UIcon name="i-simple-icons-nuxtdotjs" class="h-4 w-4 shrink-0" style="color: #00DC82;" />
-              <span>Autentikasi Aman</span>
-            </div>
-            <div class="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black px-4 h-11 text-xs font-mono text-zinc-800 dark:text-zinc-300 shadow-sm">
-              <UIcon name="i-simple-icons-flutter" class="h-4 w-4 shrink-0" style="color: #02569B;" />
-              <span>Real-time Sync</span>
-            </div>
-            <div class="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black px-4 h-11 text-xs font-mono text-zinc-800 dark:text-zinc-300 shadow-sm">
-              <UIcon name="i-simple-icons-github" class="h-4 w-4 shrink-0 text-zinc-950 dark:text-white" />
-              <span>Manajemen State</span>
-            </div>
-          </div>
-
-          <div class="absolute inset-0 pointer-events-none hidden md:block">
-            <svg class="w-full h-full" viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 176 28 C 230 28, 230 120, 272 120" stroke="#E0234E" stroke-width="1.5" />
-              <path d="M 176 91 C 230 91, 230 120, 272 120" stroke="#00DC82" stroke-width="1.5" />
-              <path d="M 176 161 C 230 161, 230 120, 272 120" stroke="#02569B" stroke-width="1.5" />
-              <path d="M 176 224 C 230 224, 230 120, 272 120" stroke="currentColor" stroke-width="1.5" class="text-zinc-300 dark:text-white" />
-
-              <line x1="328" y1="120" x2="424" y2="120" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" class="text-zinc-300 dark:text-zinc-800" />
-            </svg>
-          </div>
-
-          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div class="h-14 w-14 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black flex items-center justify-center shadow-2xl overflow-hidden p-2">
-              <img src="/NLFTs.png" alt="NLFTs Logo" class="w-full h-full object-contain" />
-            </div>
-          </div>
-
-          <div class="z-10 w-44 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A] p-3 shadow-2xl space-y-2">
-            <div class="flex gap-1 border-b border-zinc-200 dark:border-zinc-900 pb-2">
-              <span class="h-1.5 w-1.5 rounded-full bg-[#FF5F56]" />
-              <span class="h-1.5 w-1.5 rounded-full bg-[#FFBD2E]" />
-              <span class="h-1.5 w-1.5 rounded-full bg-[#27C93F]" />
-            </div>
-            <div class="h-2 w-3/4 rounded bg-zinc-200 dark:bg-zinc-900" />
-            <div class="h-10 w-full rounded border border-dashed border-zinc-200 dark:border-zinc-900 bg-white dark:bg-black" />
-          </div>
-
+      <div class="p-12 space-y-4 bg-zinc-50/50 dark:bg-[#020202]">
+        <div class="h-10 w-10 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A]">
+          <UIcon name="i-heroicons-shield-check" class="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
         </div>
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-white pt-2">
+          Keamanan Tingkat Enterprise
+        </h2>
+        <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+          Integritas data adalah prioritas. Kami mengintegrasikan protokol keamanan mutakhir sejak awal fase arsitektur, memastikan isolasi pipeline dan perlindungan menyeluruh.
+        </p>
+      </div>
+
+      <div class="p-12 space-y-4">
+        <div class="h-10 w-10 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A]">
+          <UIcon name="i-heroicons-arrows-pointing-out" class="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
+        </div>
+        <h2 class="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-white pt-2">
+          Skalabilitas Modular
+        </h2>
+        <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+          Sistem Anda akan tumbuh bersama bisnis Anda. Arsitektur modular kami memungkinkan penambahan fungsionalitas dan skalabilitas operasional tanpa mengganggu kestabilan sistem inti.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="w-full px-8 py-24 border-b border-zinc-200 dark:border-zinc-900 bg-zinc-50 dark:bg-[#020202]">
+      <div class="mx-auto max-w-[1600px]">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
+          <div class="lg:col-span-5">
+            <h2 class="text-4xl font-semibold tracking-tight text-zinc-950 dark:text-white leading-tight">
+              Kolektif Spesialis Dedikasi
+            </h2>
+          </div>
+          <div class="lg:col-span-7">
+            <p class="text-[15px] sm:text-[17px] leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-2xl font-normal">
+              Kami terdiri dari para ahli yang mendalami bidangnya—mulai dari arsitek backend hingga desainer pengalaman pengguna—yang berkolaborasi dalam struktur yang agile dan terukur.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="member in team" :key="member.id" class="border border-zinc-200 dark:border-zinc-900 rounded-xl p-8 bg-white dark:bg-black group transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700">
+            <div class="flex justify-between items-start gap-4 mb-10">
+              <div class="space-y-1">
+                <p class="text-lg font-medium text-zinc-950 dark:text-white transition-colors duration-300 group-hover:text-[#0070F3]">{{ member.name }}</p>
+                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-wider">{{ member.role }}</p>
+              </div>
+              <div class="text-xs font-mono text-zinc-300 dark:text-zinc-700 select-none">
+                /{{ member.id.toString().padStart(2, '0') }}
+              </div>
+            </div>
+            
+            <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              {{ member.expertise }}
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <section class="relative mx-auto max-w-[1600px] px-6 py-24">
-      <div class="absolute -bottom-[14px] right-4 text-zinc-400 dark:text-zinc-700 font-light text-xl select-none">+</div>
+      <div class="absolute -top-[12px] left-4 text-zinc-300 dark:text-zinc-800 font-light text-2xl select-none">+</div>
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border border-zinc-200 dark:border-zinc-900 rounded-2xl p-10 bg-gradient-to-b from-zinc-50 to-white dark:from-[#050505] dark:to-black">
-        <div class="lg:col-span-8 space-y-6">
-          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-950 dark:text-white max-w-2xl leading-tight">
-            Siap membangun sistem? <span class="text-zinc-500 font-normal">Mulai iterasi proyek Anda sekarang. Hubungi tim kami untuk mendiskusikan kebutuhan infrastruktur skala <span class="text-[#0070F3]">Pro</span> atau tingkat <span class="text-[#7928CA]">Enterprise</span> perusahaan Anda.</span>
+        <div class="lg:col-span-12 space-y-6 text-center flex flex-col items-center">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-950 dark:text-white leading-tight max-w-4xl">
+            Sinergikan Visi Anda dengan <br /><span class="font-normal text-zinc-500">Keahlian Teknikal Kami.</span>
           </h2>
-          <div class="flex items-center gap-3 pt-2">
-            <button class="h-11 px-6 rounded-md bg-zinc-950 dark:bg-white text-white dark:text-black font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all">
-              Hubungi Kami
-            </button>
-            <button class="h-11 px-6 rounded-md bg-transparent border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 font-medium text-sm hover:border-zinc-400 dark:hover:border-zinc-700 hover:text-zinc-950 dark:hover:text-white transition-all">
-              Konsultasikan Ide
-            </button>
-          </div>
-        </div>
-
-        <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-zinc-200 dark:border-zinc-900 pt-8 lg:pt-0 lg:pl-10 flex flex-col justify-center space-y-4">
-          <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            <strong class="text-zinc-950 dark:text-white font-medium">Jelajahi Opsi Enterprise</strong> dengan jaminan performa kustom, isolasi pipeline data, serta dukungan Service Level Agreement (SLA) khusus.
+          <p class="text-[16px] leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-2xl font-normal pt-2">
+            Dari startup yang ambisius hingga korporasi Enterprise, kami siap berkolaborasi untuk merancang, membangun, dan mengiterasi sistem aplikasi web yang memberikan dampak nyata bagi operasional Anda.
           </p>
-          <div>
-            <button class="h-11 px-6 w-full sm:w-auto rounded-md bg-zinc-50 dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800 text-sm font-medium text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all">
-              Solusi Korporat
+          
+          <div class="flex flex-wrap items-center justify-center gap-3 pt-6">
+            <button class="inline-flex h-11 items-center gap-2 rounded-full bg-zinc-950 dark:bg-white px-5 text-sm font-medium text-white dark:text-black transition-colors duration-200 hover:bg-zinc-800 dark:hover:bg-zinc-200">
+              <svg class="h-3 w-3 fill-current" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,15 90,85 10,85" />
+              </svg>
+              <span>Jadwalkan Konsultasi</span>
+            </button>
+
+            <button class="inline-flex h-11 items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#0A0A0A] px-5 text-sm font-medium text-zinc-900 dark:text-white transition-colors duration-200 hover:bg-zinc-100 dark:hover:bg-zinc-900">
+              Portofolio Sistem
             </button>
           </div>
         </div>
@@ -136,3 +135,22 @@
 
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const team = ref([
+  { id: 1, name: 'Andi Wijaya', role: 'Chief Architect', expertise: 'Spesialis dalam merancang arsitektur microservices dan sistem backend skala Enterprise yang terukur dan efisien.' },
+  { id: 2, name: 'Budi Santoso', role: 'Core Architect', expertise: 'Ahli dalam pengembangan sistem internal dinamis, dasbor manajemen data, dan integrasi API yang aman.' },
+  { id: 3, name: 'Citra Dewi', role: 'Experience Lead', expertise: 'Fokus pada penciptaan antarmuka pengguna yang intuitif, minimalis, dan responsif untuk portal SaaS kompleks.' },
+  { id: 4, name: 'Dedi Saputra', role: 'Ops Master', expertise: 'Mengelola isolasi pipeline data, otomasi deployment, dan memastikan kepatuhan terhadap Service Level Agreement (SLA).' },
+  { id: 5, name: 'Eka Putri', role: 'Security Lead', expertise: 'Bertanggung jawab penuh atas autentikasi aman, enkripsi data, dan audit keamanan sistem mutakhir secara real-time.' },
+  { id: 6, name: 'Faisal Karim', role: 'Strategy Director', expertise: 'Menyelaraskan tujuan operasional spesifik bisnis Anda dengan peta jalan infrastruktur teknologi yang paling efektif.' }
+]);
+</script>
+
+<style scoped>
+/* Không cần CSS kustom. Semua ditangani oleh Tailwind dan tema global Anda. */
+</style>
+
+```

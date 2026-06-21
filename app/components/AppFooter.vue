@@ -210,8 +210,7 @@ const onGiantMove = (e: MouseEvent) => {
     </div>
     
     <div class="flex gap-6 text-[11px] font-medium text-gray-400">
-      <NuxtLink to="/legal" class="hover:text-gray-900 dark:hover:text-white transition-colors">Legal</NuxtLink>
-      <NuxtLink to="/status" class="hover:text-gray-900 dark:hover:text-white transition-colors">Status</NuxtLink>
+      <!-- Removed broken internal links to avoid prerendering 404 routes -->
     </div>
   </div>
 

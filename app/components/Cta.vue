@@ -19,32 +19,32 @@
 
       <!-- Red glow — bottom center (burst) -->
 
-      <!-- ── Floating icon cards LEFT ── -->
+      <!-- ── Floating icon cards LEFT (Backend modern) ── -->
       <div class="float-card r--8 absolute" style="top:14%;left:3%;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h10M7 12h6"/></svg>
+        <UIcon name="i-simple-icons-laravel" class="h-5 w-5" style="color:#FF2D20;" />
       </div>
       <div class="float-card float-sm r6 absolute" style="top:56%;left:2%;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <UIcon name="i-simple-icons-spring" class="h-4 w-4" style="color:#6DB33F;" />
       </div>
       <div class="float-card float-sm r--14 absolute" style="top:8%;left:16%;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <UIcon name="i-simple-icons-mongodb" class="h-4 w-4" style="color:#47A248;" />
       </div>
       <div class="float-card r10 absolute" style="top:71%;left:9%;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg>
+        <UIcon name="i-simple-icons-nestjs" class="h-5 w-5" style="color:#E0234E;" />
       </div>
 
-      <!-- ── Floating icon cards RIGHT ── -->
+      <!-- ── Floating icon cards RIGHT (Frontend modern) ── -->
       <div class="float-card r6 absolute" style="top:12%;right:4%;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <UIcon name="i-simple-icons-nextdotjs" class="h-5 w-5" style="color:#000000;" />
       </div>
       <div class="float-card float-sm r--8 absolute" style="top:54%;right:2%;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <UIcon name="i-simple-icons-nuxtdotjs" class="h-4 w-4" style="color:#00DC82;" />
       </div>
       <div class="float-card float-sm r10 absolute" style="top:7%;right:16%;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <UIcon name="i-simple-icons-angular" class="h-4 w-4" style="color:#DD0031;" />
       </div>
       <div class="float-card r--14 absolute" style="top:70%;right:9%;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20"/></svg>
+        <UIcon name="i-simple-icons-vuedotjs" class="h-5 w-5" style="color:#42B883;" />
       </div>
 
       <!-- ── Center content ── -->
@@ -52,28 +52,49 @@
 
         <!-- Headline — restrained, not huge -->
         <h2 class="mb-4 leading-snug" style="font-size:28px; font-weight:500; letter-spacing:-0.02em; color:#ffffff; line-height:1.25;">
-          Build without boundaries
+          Bergabung dengan Generasi Developer Berikutnya
         </h2>
 
         <!-- Subtitle -->
         <p class="mb-9 leading-relaxed" style="font-size:14px; font-weight:400; color:rgba(255,255,255,0.45); max-width:380px; line-height:1.7;">
-          Join thousands of developers who've eliminated infrastructure complexity
-          and deployed globally. Start for free — no credit card required.
+          Kami mencari developer yang ingin terus berkembang, berkolaborasi, dan menciptakan dampak melalui teknologi modern.
         </p>
 
         <!-- Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3">
           <button
-            class=" text-sm transition-all duration-150 hover:-translate-y-px active:scale-95"
-            style="padding:10px 24px; background:#ffffff; color:#0e0e0e; font-weight:500; font-size:13.5px; border:none; cursor:pointer;"
+            class="cursor-pointer group relative overflow-hidden px-6 py-2.5 text-[13.5px] font-medium bg-white text-black transition-all duration-200 hover:-translate-y-px active:scale-95"
           >
-            Start building for free
+            <span
+              class="absolute inset-0 bg-red-600 origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100"
+            ></span>
+
+            <span class="relative z-10 transition-colors duration-300">
+              Bergabung Sekarang
+            </span>
           </button>
           <button
-            class=" text-sm transition-all duration-150 hover:-translate-y-px active:scale-95"
-            style="padding:10px 24px; background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.7); font-weight:400; font-size:13.5px; border:1px solid rgba(255,255,255,0.12); cursor:pointer; backdrop-filter:blur(4px);"
+            class="group relative overflow-hidden flex items-center justify-center h-10 px-6
+                  bg-white/5 border border-white/10 backdrop-blur-sm
+                  text-[13.5px] text-white/70 cursor-pointer
+                  transition-all duration-150 hover:-translate-y-px active:scale-95"
           >
-            View docs
+            <!-- Text -->
+            <span
+              class="transition-all duration-300 ease-out
+                    group-hover:-translate-y-8 group-hover:opacity-0"
+            >
+              View docs
+            </span>
+
+            <!-- Icon -->
+            <Icon
+              name="i-lucide-book-open"
+              class="absolute size-4 opacity-0 translate-y-8
+                    transition-all duration-300 ease-out
+                    group-hover:translate-y-0
+                    group-hover:opacity-100"
+            />
           </button>
         </div>
 
@@ -108,17 +129,16 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-
 const pauseTicker = ref(false)
 
 const tickerItems = [
-  'Deploy to 330+ cities instantly',
-  'Zero infrastructure complexity',
-  'SASE and Zero Trust without the hassle',
-  'Defend against the biggest DDoS attacks',
-  'Predictable pricing without surprises',
-  'Built-in analytics and observability',
-  'Edge-first performance globally',
+  'Komunitas #1 di indonesia',
+  'Pengalaman Developer Yang di Utamakan',
+  'Zero Konfigurasi',
+  'Berbasis Sumber Terbuka',
+  'Dukungan untuk teknologi modern',
+  'Buat Satu Untuk Semuanya',
+  'Utamakan Kualitas, Bukan Kuantitas',
 ]
 
 const tickerDouble = computed(() => [...tickerItems, ...tickerItems])

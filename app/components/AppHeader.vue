@@ -180,17 +180,17 @@ const Resources = [
     ],
   },
   {
-    title: "Build",
+    title: "",
     links: [
-      { label: "AI Apps", to: "/ai-apps" },
+      { label: "Terhubung", to: "/terhubung" },
       { label: "Web Apps", to: "/web-apps" },
       { label: "Marketing Sites", to: "/marketing-sites" },
       { label: "Platforms", to: "/platforms" },
-      { label: "Commerce", to: "/commerce" },
+      { label: "Faq", to: "/faq" },
     ],
   },
   {
-    title: "Explore",
+    title: "",
     links: [
       { label: "Customers", to: "/customers" },
       { label: "Marketplace", to: "/marketplace" },

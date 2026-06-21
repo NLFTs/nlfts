@@ -71,8 +71,16 @@ onMounted(() => {
         </div>
 
         <div class="flex-1 space-y-6">
-          <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
-            Dibangun oleh developer di seluruh Indonesia.
+          <h2 class="group text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
+            Dibangun oleh 
+            <span class="transition-colors duration-300">
+              <span class="group-hover:hidden">developer</span>
+              
+              <span class="hidden group-hover:inline">
+                Dev<span class="text-pink-500">lovers</span>
+              </span>
+            </span> 
+            di seluruh Indonesia.
           </h2>
           <p class="text-zinc-600 dark:text-zinc-400 text-lg">
             Ratusan kontributor membuat NLFTs lebih baik setiap hari. Bergabunglah dengan kami dan bangun masa depan web yang terbuka.
@@ -80,11 +88,12 @@ onMounted(() => {
           
           <div class="flex items-center gap-4 pt-4">
             <UButton 
-              label="Nuxtes" 
+              label="Develovers" 
               icon="i-heroicons-user-group" 
               variant="solid" 
               color="black"
-              class="dark:bg-white dark:text-black"
+              @click="$router.push('/halaman-tujuan')"
+              class="cursor-pointer"
             />
             <div class="flex gap-4 text-zinc-500 dark:text-zinc-400">
               <UIcon name="i-simple-icons-discord" class="w-6 h-6 hover:text-zinc-900 dark:hover:text-white cursor-pointer transition-colors" />

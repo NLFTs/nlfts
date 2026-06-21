@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "nuxt build",
+    "predev": "node ./scripts/ensure-payload.js",
     "generate": "nuxt generate",
     "vercel-build": "nuxt generate",
     "dev": "nuxt dev",

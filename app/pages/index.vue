@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import gsap from 'gsap'
-import ImpactStats from '@/components/ImpactStats.vue'
-import ProfileSection from '@/components/ProfileSection.vue'
-import BlogSection from '@/components/BlogSection.vue'
-import DownloadAppSection from '@/components/DownloadAppSection.vue'
-import TestimonialsSection from '@/components/TestimonialsSection.vue'
 
 // SEO Implementation
 useSeoMeta({
@@ -321,9 +316,9 @@ onUnmounted(() => {
   <ImpactStats :stats="impactStats" />
   <ProfileSection />
   <BlogSection />
-  <DownloadAppSection />
+  <DevSection />
   <TestimonialsSection />
-  <LocationSection />
+  <Cta />
 </main>
 </template>
 
