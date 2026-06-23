@@ -7,13 +7,16 @@ useSeoMeta({
   ogTitle: 'NLFTs — Startup berbasis komunitas untuk teknologi perangkat lunak',
   description: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
   ogDescription: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
-  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
   ogUrl: 'https://nlfts.dev',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'NLFTs — Komunitas Programer terbesar di Bandung Indonesia',
   twitterDescription: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
-  twitterImage: 'https://nlfts.dev/nlfts.webp',
+  twitterImage: 'https://nlfts.dev/og/main.png',
 })
 
 const impactStats = [

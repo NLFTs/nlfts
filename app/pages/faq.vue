@@ -56,13 +56,16 @@ useSeoMeta({
   ogTitle: 'FAQ — Pertanyaan Umum NLFTs',
   description: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
   ogDescription: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
-  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
   ogUrl: 'https://nlfts.dev/faq',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'FAQ — Pertanyaan Umum NLFTs',
   twitterDescription: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
-  twitterImage: 'https://nlfts.dev/nlfts.webp',
+  twitterImage: 'https://nlfts.dev/og/main.png',
 })
 
 const activeIndex = ref<number | null>(0);

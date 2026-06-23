@@ -4,13 +4,16 @@ useSeoMeta({
   ogTitle: 'Tentang NLFTs — Komunitas Developer Indonesia',
   description: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
   ogDescription: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
-  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
   ogUrl: 'https://nlfts.dev/about',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Tentang NLFTs — Komunitas Developer Indonesia',
   twitterDescription: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
-  twitterImage: 'https://nlfts.dev/nlfts.webp',
+  twitterImage: 'https://nlfts.dev/og/main.png',
 })
 </script>
 

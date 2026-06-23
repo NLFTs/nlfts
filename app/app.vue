@@ -122,9 +122,14 @@ useHead(() => ({
 
 useSeoMeta({
   titleTemplate: '%s - NLFTs',
-  ogImage: '/nlfts.webp',
-  twitterImage: '/nlfts.webp',
-  twitterCard: 'summary_large_image'
+  ogSiteName: 'NLFTs',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@nlfts_dev',
+  twitterImage: 'https://nlfts.dev/og/main.png'
 })
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {

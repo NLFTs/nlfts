@@ -838,13 +838,16 @@ useSeoMeta({
   ogTitle: 'Terhubung dengan NLFTs — Komunitas Developer Indonesia',
   description: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
   ogDescription: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
-  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogImage: 'https://nlfts.dev/og/link.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
   ogUrl: 'https://nlfts.dev/terhubung',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Terhubung dengan NLFTs — Komunitas Developer Indonesia',
   twitterDescription: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
-  twitterImage: 'https://nlfts.dev/nlfts.webp',
+  twitterImage: 'https://nlfts.dev/og/link.png',
 })
 
 const contactMethods = ref([
