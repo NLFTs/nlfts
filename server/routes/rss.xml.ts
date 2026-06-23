@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
     const description = escapeXml(post.description ?? '')
     const category = post.badge?.label ? `<category>${escapeXml(post.badge.label)}</category>` : ''
 
-    let image = `${baseUrl}/NLFTs.png`
+    let image = `${baseUrl}/nlfts.webp`
     if (post.image?.src) {
       image = post.image.src.startsWith('http')
         ? post.image.src
@@ -59,7 +59,7 @@ export default defineEventHandler(async (event) => {
     <lastBuildDate>${now}</lastBuildDate>
     <ttl>60</ttl>
     <image>
-      <url>${baseUrl}/NLFTs.png</url>
+      <url>${baseUrl}/nlfts.webp</url>
       <title>NLFTs Blog</title>
       <link>${baseUrl}/blog</link>
       <width>144</width>

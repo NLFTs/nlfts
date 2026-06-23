@@ -10,7 +10,7 @@
         <!-- Gambar (Tampil di Desktop, Hilang di Mobile) -->
         <div class="hidden md:block w-full max-w-[400px] opacity-80 dark:opacity-40 select-none">
           <img 
-            src="/images/mas.png" 
+            src="/images/mas.webp" 
             alt="Ilustrasi Pertanyaan" 
             class="w-full h-auto object-contain" 
             onerror="this.style.display='none'"
@@ -48,12 +48,26 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
-const activeIndex = ref(0);
+useSeoMeta({
+  title: 'FAQ — Pertanyaan Umum NLFTs',
+  ogTitle: 'FAQ — Pertanyaan Umum NLFTs',
+  description: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
+  ogDescription: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
+  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogUrl: 'https://nlfts.dev/faq',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'FAQ — Pertanyaan Umum NLFTs',
+  twitterDescription: 'Pertanyaan yang sering diajukan seputar komunitas NLFTs, syarat bergabung, teknologi yang digunakan, dan cara berkontribusi.',
+  twitterImage: 'https://nlfts.dev/nlfts.webp',
+})
 
-const toggle = (index) => {
+const activeIndex = ref<number | null>(0);
+
+const toggle = (index: number) => {
   activeIndex.value = activeIndex.value === index ? null : index;
 };
 

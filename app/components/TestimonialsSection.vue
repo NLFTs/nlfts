@@ -241,12 +241,12 @@ const columns = computed(() => {
 .fade-bottom-dark {
   background: linear-gradient(
     to bottom,
-    rgba(3, 7, 18, 0)    0%,
-    rgba(3, 7, 18, 0.15) 15%,
-    rgba(3, 7, 18, 0.55) 35%,
-    rgba(3, 7, 18, 0.88) 55%,
-    rgba(3, 7, 18, 1)    70%,
-    rgba(3, 7, 18, 1)    100%
+    rgba(10, 10, 10, 0)    0%,
+    rgba(10, 10, 10, 0.15) 15%,
+    rgba(10, 10, 10, 0.55) 35%,
+    rgba(10, 10, 10, 0.88) 55%,
+    rgba(10, 10, 10, 1)    70%,
+    rgba(10, 10, 10, 1)    100%
   );
 }
 

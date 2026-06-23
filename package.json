@@ -34,6 +34,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
     "eslint": "^10.1.0",
+    "sharp": "^0.35.2",
     "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6",
     "wrangler": "^4.103.0"

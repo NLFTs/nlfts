@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-11',
 
-  server: {
+  devServer: {
     host: '0.0.0.0',
     port: 3000
   },

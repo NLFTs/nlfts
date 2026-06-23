@@ -43,7 +43,7 @@ export default defineEventHandler(async (event) => {
   <id>${baseUrl}/</id>
   <updated>${updated}</updated>
   <author><name>NLFTs</name><email>halo@NLFTs.dev</email></author>
-  <icon>${baseUrl}/NLFTs.png</icon>
+  <icon>${baseUrl}/nlfts.webp</icon>
   ${entries}
 </feed>`
 

@@ -1,306 +1,182 @@
 <template>
   <main class="min-h-screen bg-white text-zinc-900 antialiased dark:bg-black dark:text-zinc-50">
-    <section class="mx-auto max-w-4xl px-6 pt-24 pb-16 text-center md:pt-32">
-      <div class="space-y-4">
-        <span class="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium tracking-tight text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
-          Karir & Peluang
-        </span>
-        <h1 class="text-4xl font-normal tracking-tighter sm:text-5xl md:text-6xl text-black dark:text-white">
-          Bangun masa depan web bersama NLFTs.
-        </h1>
-        <p class="mx-auto max-w-2xl text-base text-zinc-500 sm:text-lg dark:text-zinc-400">
-          Kami mencari engineer yang terobsesi dengan kecepatan, presisi kode, dan desain minimalis. Di sini, kualitas dan performa sistem adalah segalanya.
-        </p>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-5xl px-6 py-12">
-      <div class="grid gap-px bg-zinc-200 dark:bg-zinc-800 sm:grid-cols-3">
-        <article class="bg-white p-8 dark:bg-black">
-          <span class="text-xs font-mono text-zinc-400 dark:text-zinc-500">01 / Fleksibilitas</span>
-          <h2 class="mt-4 text-lg font-medium text-black dark:text-white">100% Remote & Otonomi</h2>
-          <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Kami tidak peduli dari mana Anda bekerja atau kapan jam kerja Anda, selama proyek selesai dengan kualitas kode luar biasa.
-          </p>
-        </article>
-
-        <article class="bg-white p-8 dark:bg-black">
-          <span class="text-xs font-mono text-zinc-400 dark:text-zinc-500">02 / Efisiensi</span>
-          <h2 class="mt-4 text-lg font-medium text-black dark:text-white">Tanpa Rapat Berlebihan</h2>
-          <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Komunikasi kami bersifat asinkronus dan efisien. Kami mengganti rapat berjam-jam dengan dokumentasi tertulis yang solid.
-          </p>
-        </article>
-
-        <article class="bg-white p-8 dark:bg-black">
-          <span class="text-xs font-mono text-zinc-400 dark:text-zinc-500">03 / Standardisasi</span>
-          <h2 class="mt-4 text-lg font-medium text-black dark:text-white">Presisi Tanpa Kompromi</h2>
-          <p class="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Dari optimasi bundling JS hingga struktur query database, kami tidak pernah mengorbankan performa demi kecepatan rilis.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-4xl px-6 py-16">
-      <div class="mb-12 border-b border-zinc-100 pb-6 dark:border-zinc-800">
-        <h2 class="text-2xl font-medium tracking-tight text-black dark:text-white">Lowongan Aktif</h2>
-        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Pilih peran Anda dan mari buat sistem digital terbaik.</p>
-      </div>
-
-      <div class="divide-y divide-zinc-100 border-t border-b border-zinc-100 dark:divide-zinc-800 dark:border-zinc-800">
-        <article v-for="job in jobs" :key="job.dev" class="group py-6">
-          <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-            <div class="space-y-1">
-              <h3 class="text-lg font-medium text-black group-hover:text-zinc-600 dark:text-white dark:group-hover:text-zinc-300">
-                {{ job.title }}
-              </h3>
-              <p class="font-mono text-xs text-zinc-400 dark:text-zinc-500">
-                {{ job.department }} &middot; {{ job.type }}
-              </p>
-            </div>
-
-            <NuxtLink
-              :to="`/karir/${job.slug}`"
-              class="inline-flex h-9 items-center justify-center rounded-md border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-900 shadow-sm transition hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
-            >
-              Lihat Detail
-            </NuxtLink>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-4xl px-6 py-16">
-      <div class="mb-12">
-        <h2 class="text-2xl font-medium tracking-tight text-black dark:text-white">Alur Seleksi</h2>
-        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Proses asinkronus yang menghargai waktu Anda.</p>
-      </div>
-
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div v-for="(step, index) in steps" :key="index" class="rounded-lg border border-zinc-100 p-5 dark:border-zinc-800">
-          <span class="font-mono text-xs text-zinc-400 dark:text-zinc-500">STEP 0{{ index + 1 }}</span>
-          <h3 class="mt-2 text-sm font-medium text-black dark:text-white">{{ step.title }}</h3>
-          <p class="mt-1 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">{{ step.desc }}</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-2xl px-6 py-16 border-t border-zinc-100 dark:border-zinc-800">
-      <div class="mb-8 text-center">
-        <h2 class="text-2xl font-medium tracking-tight text-black dark:text-white">Formulir Pendaftaran</h2>
-        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Lengkapi berkas Anda. Tidak diperlukan pendaftaran akun.</p>
-      </div>
-
-      <div v-if="submitted" class="rounded-lg border border-zinc-200 bg-zinc-50 p-6 text-center dark:border-zinc-800 dark:bg-zinc-900/50">
-        <h3 class="text-sm font-medium text-black dark:text-white">Aplikasi Berhasil Terkirim</h3>
-        <p class="mt-2 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
-          Terima kasih telah mendaftar. Tim kami akan melakukan tinjauan portofolio dan menghubungi Anda melalui email dalam waktu 2-3 hari kerja.
-        </p>
-        <button type="button" class="mt-4 text-xs font-medium text-black underline underline-offset-4 dark:text-white" @click="resetForm">
-          Kirim Aplikasi Lain
-        </button>
-      </div>
-
-      <form v-else @submit.prevent="submitForm" class="space-y-6">
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="space-y-1.5">
-            <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Nama Lengkap *</label>
-            <input 
-              v-model="form.name" 
-              type="text" 
-              required 
-              minlength="3"
-              placeholder="Contoh: John Doe"
-              class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100" 
-            />
-          </div>
-
-          <div class="space-y-1.5">
-            <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Alamat Email *</label>
-            <input 
-              v-model="form.email" 
-              type="email" 
-              required 
-              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-              placeholder="name@domain.com"
-              title="Masukkan alamat email yang valid dengan tanda '@' dan subdomain akhir (misal: .com, .dev, .co.dev)"
-              class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100" 
-            />
-          </div>
-        </div>
-
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="space-y-1.5">
-            <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">No. WhatsApp / Telegram *</label>
-            <div class="flex rounded-md shadow-sm border border-zinc-200 dark:border-zinc-800 focus-within:border-zinc-500 dark:focus-within:border-zinc-400 transition bg-transparent">
-              <select 
-                v-model="form.phoneCode" 
-                required
-                class="rounded-l-md bg-zinc-50 px-3 text-xs font-medium border-r border-zinc-200 outline-none text-zinc-800 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-200 cursor-pointer"
-              >
-                <option value="+62">🇮🇩 +62</option>
-                <option value="+86">🇨🇳 +86</option>
-              </select>
-              <input 
-                v-model="form.phone" 
-                type="text" 
-                required
-                pattern="^[0-9]{8,15}$"
-                placeholder="8123456789"
-                title="Masukkan angka saja tanpa menggunakan spasi atau tanda hubung (8 hingga 15 digit)"
-                class="w-full rounded-r-md bg-transparent px-3 py-2 text-sm outline-none text-zinc-900 dark:text-zinc-100" 
-              />
-            </div>
-          </div>
-
-          <div class="space-y-1.5">
-            <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Posisi Yang Dilamar *</label>
-            <select 
-              v-model="form.position" 
-              required 
-              class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100 cursor-pointer"
-            >
-              <option value="" class="text-zinc-400 dark:bg-black">Pilih posisi</option>
-              <option v-for="job in jobs" :key="job.dev" :value="job.title" class="dark:bg-black text-zinc-900 dark:text-zinc-100">
-                {{ job.title }}
-              </option>
-            </select>
-          </div>
-        </div>
-
-        <div class="space-y-1.5">
-          <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tautan Portofolio / GitHub Link *</label>
-          <input 
-            v-model="form.portfolio" 
-            type="url" 
-            required 
-            placeholder="https://github.com/username atau https://yourportfolio.com"
-            class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100" 
-          />
-        </div>
-
-        <div class="space-y-1.5">
-          <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tautan CV / Resume (Google Drive/Dropbox) *</label>
-          <input 
-            v-model="form.cv" 
-            type="url" 
-            required 
-            placeholder="https://drive.google.com/..."
-            class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100" 
-          />
-        </div>
-
-        <div class="space-y-1.5">
-          <label class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Kenapa NLFTs? (Brief Pitch)</label>
-          <textarea 
-            v-model="form.pitch" 
-            rows="4" 
-            maxlength="300" 
-            placeholder="Tuliskan motivasi singkat Anda di sini..." 
-            class="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm outline-none transition focus:border-zinc-500 dark:border-zinc-800 dark:focus:border-zinc-400 text-zinc-900 dark:text-zinc-100"
-          ></textarea>
-          <div class="flex justify-between text-[10px] text-zinc-400">
-            <span>Singkat dan padat.</span>
-            <span>Maksimal 300 kata</span>
-          </div>
-        </div>
-
-        <button 
-          type="submit" 
-          class="inline-flex h-10 w-full items-center justify-center rounded-md bg-zinc-950 px-4 text-sm font-medium text-white shadow-md transition-colors duration-200 hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200" 
-          :disabled="submitting"
+    <!-- Hero Section -->
+    <section class="mx-auto max-w-5xl px-6 pt-24 pb-16 md:pt-32">
+      <h1 class="text-4xl font-normal tracking-tighter text-zinc-900 dark:text-white sm:text-5xl">
+        Jadikan Komunitas ini.<br />
+        Lebih Baik. <span class="text-blue-500">Bersama.</span>
+      </h1>
+      <div class="flex gap-3 mt-8">
+        <a
+          href="#open-positions"
+          class="inline-flex h-9 items-center justify-center rounded-md bg-blue-500 px-5 text-sm font-medium text-white transition hover:bg-blue-600"
         >
-          {{ submitting ? 'Mengirim Data...' : 'Kirim Berkas Aplikasi' }}
-        </button>
-      </form>
+          Buka Posisi
+        </a>
+        <a
+          href="#benefits"
+          class="inline-flex h-9 items-center justify-center rounded-md border border-zinc-200 px-5 text-sm font-medium text-zinc-800 transition hover:border-zinc-400 dark:border-zinc-700 dark:text-zinc-200 dark:hover:border-zinc-500"
+        >
+          Benefits
+        </a>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="mx-auto max-w-5xl px-6 pb-20">
+      <h2 class="text-2xl font-normal tracking-tight text-zinc-900 dark:text-white mb-10">Benefits</h2>
+      <div class="grid grid-cols-1 gap-x-16 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div v-for="benefit in benefits" :key="benefit.title" class="flex flex-col gap-2.5">
+          <div class="w-6 h-6 text-blue-500">
+            <component :is="benefit.icon" />
+          </div>
+          <h3 class="text-sm font-semibold text-zinc-900 dark:text-white">{{ benefit.title }}</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ benefit.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section id="open-positions" class="mx-auto max-w-5xl px-6 pb-28">
+      <div class="border-t border-zinc-100 dark:border-zinc-800 pt-12">
+        <h2 class="text-2xl font-normal tracking-tight text-zinc-900 dark:text-white mb-2">Open positions</h2>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-10">Semua posisi bersifat remote dan penuh waktu.</p>
+
+        <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
+          <NuxtLink
+            v-for="job in jobs"
+            :key="job.slug"
+            :to="`/karir/${job.slug}`"
+            class="group flex items-center justify-between py-5 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900 -mx-4 px-4 rounded-lg"
+          >
+            <div class="space-y-0.5">
+              <p class="text-sm font-medium text-zinc-900 dark:text-white group-hover:text-blue-500 transition-colors">
+                {{ job.title }}
+              </p>
+              <div class="flex items-center gap-2 font-mono text-xs text-zinc-400 dark:text-zinc-500">
+                <span>{{ job.department }}</span>
+                <span>&middot;</span>
+                <span>{{ job.type }}</span>
+              </div>
+            </div>
+            <span class="text-zinc-300 dark:text-zinc-600 group-hover:text-blue-400 transition-colors text-lg">&rarr;</span>
+          </NuxtLink>
+        </div>
+      </div>
     </section>
   </main>
 </template>
 
-<script lang="ts" setup>
-import { reactive, ref } from 'vue'
+<script setup lang="ts">
+import { defineComponent, h } from 'vue'
 
-// Pengaturan SEO Meta Tag Halaman Utama Karir
-useSeoMeta({
-  title: 'Karir & Peluang - NLFTs',
-  description: 'Gabung dengan tim NLFTs sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
-  ogTitle: 'Karir & Peluang - NLFTs',
-  ogDescription: 'Gabung dengan tim NLFTs sebagai engineer remote yang fokus pada performa, kualitas kode, dan desain minimalis.',
-  ogImage: '/NLFTs.png'
+// Icons
+const BookIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z' })
+      ])
+  }
 })
 
-// Data Utama Lowongan Kerja (Termasuk Slug Penunjuk Rute Halaman Detail)
+const HeartIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' })
+      ])
+  }
+})
+
+const RemoteIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11z' })
+      ])
+  }
+})
+
+const VacationIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M2.5 19h19v2h-19zm19.57-9.36l-1.43-1.43c-.2-.2-.49-.25-.74-.13L17 9.5l-2.12-2.12c-.39-.39-1.02-.39-1.41 0l-1.27 1.27L9.7 6.15c-.2-.2-.51-.22-.73-.04L2.3 12.28c-.24.2-.24.55-.03.78l.04.04c.19.2.5.22.72.04l6.4-5.55 1.81 1.81-5.52 5.52c-.19.19-.19.5 0 .69l.03.03c.19.19.5.19.69 0l7.39-7.39 1.69 1.69-4.56 4.56c-.19.19-.19.5 0 .69l.03.03c.19.19.5.19.69 0l5.95-5.95c.21-.21.2-.55-.05-.75z' })
+      ])
+  }
+})
+
+const RetirementIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z' })
+      ])
+  }
+})
+
+const StockIcon = defineComponent({
+  setup() {
+    return () =>
+      h('svg', { viewBox: '0 0 24 24', fill: 'currentColor', class: 'w-6 h-6' }, [
+        h('path', { d: 'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' })
+      ])
+  }
+})
+
+const benefits = [
+  {
+    title: 'Belajar dan Berkembang',
+    description: 'Bekerja bersama talenta terbaik di ekosistem dan membangun alat yang disukai para developer.',
+    icon: BookIcon
+  },
+  {
+    title: 'Manfaat Kesehatan',
+    description: 'Fasilitas kesehatan yang kuat dan bersifat pribadi, tersedia di mana pun Anda tinggal.',
+    icon: HeartIcon
+  },
+  {
+    title: 'Tempat Kerja Jarak Jauh',
+    description: 'Tim yang sepenuhnya terdistribusi dan bekerja bersama untuk membangun generasi produk berikutnya.',
+    icon: RemoteIcon
+  },
+  {
+    title: 'Waktu Liburan',
+    description: 'Anggota yang beristirahat dengan baik dapat memberikan hasil terbaik. Tersedia waktu liburan yang fleksibel.',
+    icon: VacationIcon
+  },
+  {
+    title: 'Kontribusi Dana Pensiun',
+    description: 'Kontribusi dana pensiun tersedia dan disesuaikan dengan negara tempat Anda berada.',
+    icon: RetirementIcon
+  },
+  {
+    title: 'Kepemilikan Saham',
+    description: 'Anggota berhak mendapatkan opsi saham sehingga dapat ikut merasakan keberhasilan bersama.',
+    icon: StockIcon
+  }
+]
+
+// Sinkron dengan jobsData di [slug].vue
 const jobs = [
   {
-    id: 1,
     slug: 'fullstack-engineer',
     title: 'Fullstack Engineer',
     department: 'Engineering',
     type: 'Remote'
   },
   {
-    id: 2,
     slug: 'backend-engineer',
     title: 'Backend Engineer',
     department: 'Engineering',
     type: 'Remote'
   },
   {
-    id: 3,
     slug: 'frontend-engineer',
     title: 'Frontend Engineer',
     department: 'Engineering',
     type: 'Remote'
   }
 ]
-
-// Data Alur Seleksi Kerja
-const steps = [
-  { title: 'Kirim Aplikasi', desc: 'Lengkapi berkas dengan menyertakan portofolio kode terbaik Anda.' },
-  { title: 'Review Portofolio', desc: 'Tim internal meninjau kualitas arsitektur dari repositori asli Anda.' },
-  { title: 'Uji Praktis', desc: 'Tugas kecil berbayar (paid task) untuk mengukur kecocokan ritme kerja.' },
-  { title: 'Penawaran Kontrak', desc: 'Integrasi onboard secara asinkronus dan penyiapan lingkungan kerja.' }
-]
-
-// Reactive State Management
-const submitting = ref(false)
-const submitted = ref(false)
-
-// State Formulir (Mendukung Sinkronisasi Dropdown Kode Telepon)
-const form = reactive({
-  name: '',
-  email: '',
-  phoneCode: '+62', // Default bernilai Indonesia (+62), bisa diubah dinamis ke China (+86) via v-model
-  phone: '',
-  position: '',
-  portfolio: '',
-  cv: '',
-  pitch: ''
-})
-
-// Fungsi Eksekusi Pengiriman Formulir (Mock Submit)
-const submitForm = async () => {
-  submitting.value = true
-  
-  // Log penggabungan kode negara dan nomor untuk kebutuhan integrasi backend/API
-  // console.log('Data Terkirim:', { ...form, fullPhone: `${form.phoneCode}${form.phone}` })
-  
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-  submitting.value = false
-  submitted.value = true
-}
-
-// Fungsi Reset Formulir Kembali ke State Awal
-const resetForm = () => {
-  submitted.value = false
-  form.name = ''
-  form.email = ''
-  form.phoneCode = '+62'
-  form.phone = ''
-  form.position = ''
-  form.portfolio = ''
-  form.cv = ''
-  form.pitch = ''
-}
 </script>

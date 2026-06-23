@@ -2,7 +2,7 @@
 title: TypeScript Keselamatan yang Mengikat atau Sekadar Beban Gula Semantik?
 description: Analisis kritis terhadap TypeScript sebagai superset JavaScript, mengupas sisi over-engineering, ilusi keamanan tipe, serta fakta menarik yang jarang diketahui.
 image:
-  src: ./blog/ts.png
+  src: ./blog/ts.webp
 authors:
   - name: Silo Kusuma
     to: 

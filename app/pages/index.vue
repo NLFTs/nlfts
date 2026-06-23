@@ -7,13 +7,13 @@ useSeoMeta({
   ogTitle: 'NLFTs — Startup berbasis komunitas untuk teknologi perangkat lunak',
   description: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
   ogDescription: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
-  ogImage: 'https://nlfts.dev/NLFTs.png',
+  ogImage: 'https://nlfts.dev/nlfts.webp',
   ogUrl: 'https://nlfts.dev',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'NLFTs — Komunitas Programer terbesar di Bandung Indonesia',
   twitterDescription: 'NLFTs adalah Startup berbasis komunitas yang berfokus pada pembangunan teknologi perangkat lunak generasi berikutnya. Beroperasi dalam lingkup wilayah Indonesia, NLFTs menggabungkan kolaborasi terbuka dengan aturan, kepemilikan intelektual yang jelas, dan mekanisme lisensi yang tegak sehingga inovasi dapat berjalan cepat dan berkelanjutan.',
-  twitterImage: 'https://nlfts.dev/NLFTs.png',
+  twitterImage: 'https://nlfts.dev/nlfts.webp',
 })
 
 const impactStats = [
@@ -51,7 +51,7 @@ interface Brand {
 // Brand Data for Ticker
 const allBrands: Brand[] = [
   { name: 'Google', logo: 'https://www.vectorlogo.zone/logos/google/google-ar21.svg', isImage: true },
-  { name: 'Vuxi', logo: '/company/Vuxi.png', fallback: 'https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg', isImage: true },
+  { name: 'Vuxi', logo: '/company/Vuxi.webp', fallback: 'https://www.logo.wine/a/logo/Mitsubishi_Fuso_Truck_and_Bus_Corporation/Mitsubishi_Fuso_Truck_and_Bus_Corporation-Logo.wine.svg', isImage: true },
   { name: 'NLFTs', logo: 'NLFTs', isImage: false },
   { name: 'Next.js', logo: 'https://www.vectorlogo.zone/logos/nextjs/nextjs-ar21.svg', isImage: true },
   { name: 'Nuxt', logo: 'https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-ar21.svg', isImage: true },
@@ -231,7 +231,7 @@ onUnmounted(() => {
 <main>
   <div class="relative overflow-hidden selection:bg-emerald-500/30 pb-32">
     <div class="absolute inset-0 bg-gradient-to-b from-white dark:from-black via-orange-400 to-black z-0"></div>
-    <div class="absolute inset-0 -bottom-40 z-[1] bg-[url('/images/gunung-transpert.png')] bg-cover bg-center bg-no-repeat"></div>
+    <div class="absolute inset-0 -bottom-40 z-[1] bg-[url('/images/gunung-transpert.webp')] bg-cover bg-center bg-no-repeat"></div>
 
     <div class="relative z-10 pt-12 md:pt-16 pb-2">
       <div class="max-w-[1500px] mx-auto px-6 sm:px-12 md:px-16">

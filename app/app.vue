@@ -25,7 +25,7 @@ useHead(() => ({
   ],
 
   link: [
-    { rel: 'icon', type: 'image/png', href: '/NLFTs.png' },
+    { rel: 'icon', type: 'image/png', href: '/nlfts.webp' },
     { rel: 'canonical', href: canonicalUrl.value },
     // RSS feeds
     { rel: 'alternate', type: 'application/rss+xml', title: 'NLFTs Blog RSS', href: 'https://NLFTs.dev/rss.xml' },
@@ -43,7 +43,7 @@ useHead(() => ({
         '@type': 'Organization',
         name: 'NLFTs',
         url: 'https://NLFTs.dev',
-        logo: 'https://NLFTs.dev/NLFTs.png',
+        logo: 'https://NLFTs.dev/nlfts.webp',
         description: 'Jasa pembuatan website, hosting, domain, game server, dan aplikasi Android di Semarang, Indonesia.',
         address: {
           '@type': 'PostalAddress',
@@ -58,7 +58,7 @@ useHead(() => ({
           availableLanguage: 'Indonesian'
         },
         sameAs: [
-          'https://www.instagram.com/NLFTs_id',
+          'https://www.instagram.com/nlfts.dev',
           'https://github.com/NLFTs',
           'https://www.tiktok.com/@webcraftidng'
         ]
@@ -122,8 +122,8 @@ useHead(() => ({
 
 useSeoMeta({
   titleTemplate: '%s - NLFTs',
-  ogImage: '/NLFTs.png',
-  twitterImage: '/NLFTs.png',
+  ogImage: '/nlfts.webp',
+  twitterImage: '/nlfts.webp',
   twitterCard: 'summary_large_image'
 })
 

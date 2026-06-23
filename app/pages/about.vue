@@ -1,10 +1,27 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Tentang NLFTs — Komunitas Developer Indonesia',
+  ogTitle: 'Tentang NLFTs — Komunitas Developer Indonesia',
+  description: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
+  ogDescription: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
+  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogUrl: 'https://nlfts.dev/about',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Tentang NLFTs — Komunitas Developer Indonesia',
+  twitterDescription: 'NLFTs adalah perusahaan sekaligus komunitas developer yang berfokus pada Developer Experience (Dx), adopsi teknologi modern, dan kolaborasi intensif 24 jam.',
+  twitterImage: 'https://nlfts.dev/nlfts.webp',
+})
+</script>
+
 <template>
   <div class="min-h-screen flex flex-col font-sans bg-white text-zinc-900 dark:bg-black dark:text-white">
+
 
     <!-- Banner Header -->
     <header class="w-full">
       <img
-        src="/images/station.png"
+        src="/images/station.webp"
         alt="Banner"
         class="w-full h-80 md:h-96 object-cover pointer-events-none select-none"
         style="-webkit-user-drag:none;-moz-user-drag:none;-ms-user-drag:none;user-drag:none;"
@@ -110,7 +127,7 @@
               class="w-full h-72 rounded-lg overflow-hidden border bg-zinc-100 border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800"
             >
               <img
-                src="/images/studio.png"
+                src="/images/studio.webp"
                 alt="Exhibitor Area"
                 class="w-full h-full object-cover pointer-events-none select-none"
                 style="-webkit-user-drag:none;user-drag:none;"

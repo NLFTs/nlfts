@@ -11,31 +11,39 @@
     </header>
 
     <!-- Section Discord -->
-  <section class="bg-black py-32 text-white">
+  <section class="bg-zinc-50 dark:bg-black py-32 text-zinc-900 dark:text-white transition-colors duration-300">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid items-center gap-20 lg:grid-cols-[480px_1fr]">
  
         <!-- LEFT -->
         <div class="max-w-lg">
-          <span class="mb-6 inline-flex rounded-full border border-zinc-800 px-4 py-1 text-xs tracking-[0.2em] uppercase text-zinc-500">
+          <span class="mb-6 inline-flex rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-1 text-xs tracking-[0.2em] uppercase text-zinc-500">
             Community
           </span>
-          <h2 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h2 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl text-zinc-950 dark:text-white">
             Gabung Dengan
             <span class="text-[#5865F2]">Discord</span>
           </h2>
-          <p class="mt-8 text-base leading-8 text-zinc-400">
+          <p class="mt-8 text-base leading-8 text-zinc-600 dark:text-zinc-400">
             Bergabung bersama komunitas kami untuk berdiskusi,
             mendapatkan update terbaru, berbagi karya, dan
             berinteraksi dengan anggota lain kapan saja.
           </p>
           <div class="mt-10 flex gap-4">
-            <button class="rounded-xl bg-white px-7 py-3 text-sm font-medium text-black transition hover:opacity-90">
+            <NuxtLink
+              to="/discord"
+              external
+              target="_blank"
+              class="cursor-pointer inline-flex rounded-xl bg-zinc-900 dark:bg-white px-7 py-3 text-sm font-medium text-black dark:text-black transition hover:opacity-90 shadow-sm"
+            >
               Masuk Discord
-            </button>
-            <button class="rounded-xl border border-zinc-800 px-7 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-700">
+            </NuxtLink>
+            <NuxtLink
+              to="/docs/getting-started#discord"
+              class="rounded-xl border border-zinc-300 dark:border-zinc-800 px-7 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 transition hover:bg-zinc-100 dark:hover:bg-zinc-900/50 hover:border-zinc-400 dark:hover:border-zinc-700"
+            >
               Pelajari Lebih Lanjut
-            </button>
+            </NuxtLink>
           </div>
         </div>
  
@@ -385,9 +393,8 @@
     </div>
   </section>
 
-
   <!-- Section WhatsApp -->
-     <section class="bg-black py-32 text-white">
+     <section class="bg-white dark:bg-black py-32 text-zinc-900 dark:text-white transition-colors duration-300">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid items-center gap-20 lg:grid-cols-[1fr_480px]">
  
@@ -449,8 +456,8 @@
                   >
                     <!-- Avatar -->
                     <div class="relative flex-shrink-0">
-                      <div :class="['w-11 h-11 rounded-full flex items-center justify-center text-white text-sm font-bold', chat.avatarColor]">
-                        {{ chat.initial }}
+                      <div :class="['w-11 h-11 rounded-full flex items-center justify-center text-white text-sm font-bold', chat.avatarColor]">   
+                        <img :src="chat.initial" alt="" class="w-full h-full object-cover rounded-full">
                       </div>
                       <div v-if="chat.isGroup" class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#25D366] flex items-center justify-center border-2 border-[#111214]">
                         <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
@@ -480,7 +487,7 @@
                 <div class="flex items-center gap-3 px-4 py-3 border-b border-zinc-800 bg-[#111214] flex-shrink-0">
                   <template v-if="currentChat">
                     <div :class="['w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0', currentChat.avatarColor]">
-                      {{ currentChat.initial }}
+                        <img :src="currentChat.initial" alt="" class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="text-xs font-semibold text-white">{{ currentChat.name }}</p>
@@ -515,10 +522,12 @@
  
                     <!-- msg: davingm (sender, kiri) -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">D</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/228851591?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2 text-left">
-                          <p class="text-[10px] font-semibold text-violet-400 mb-0.5">davingm 👑</p>
+                          <p class="text-[10px] font-semibold text-violet-400 mb-0.5">davingm</p>
                           <p class="text-[11px] text-zinc-200 leading-relaxed">Selamat datang semua di grup <span class="font-semibold text-[#25D366]">FTs Project</span>! 🎉 Ini tempat kita ngobrol soal web dev, share project, dan kolaborasi bareng.</p>
                           <p class="text-[9px] text-zinc-600 mt-1 text-right">08.17 ✓✓</p>
                         </div>
@@ -527,11 +536,13 @@
  
                     <!-- msg: Tokita (kiri) -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-rose-500 to-pink-700 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">T</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-rose-500 to-pink-700 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/216720543?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                          <p class="text-[10px] font-semibold text-rose-400 mb-0.5">Tokita</p>
-                          <p class="text-[11px] text-zinc-200">Sip siap! Ada agenda apa dulu nih bang? 🙌</p>
+                          <p class="text-[10px] font-semibold text-rose-400 mb-0.5">Fandy.dev</p>
+                          <p class="text-[11px] text-zinc-200">Sip siap! Ada agenda apa dulu nih semua? 🙌</p>
                           <p class="text-[9px] text-zinc-600 mt-1 text-right">08.19 ✓✓</p>
                         </div>
                       </div>
@@ -539,10 +550,12 @@
  
                     <!-- msg: plana (kiri) -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">P</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/226198461?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                          <p class="text-[10px] font-semibold text-blue-400 mb-0.5">plana</p>
+                          <p class="text-[10px] font-semibold text-blue-400 mb-0.5">radietya pratama</p>
                           <p class="text-[11px] text-zinc-200">Rencananya mau bikin open-source project bareng, stack-nya Vue + Nuxt 4. Ada yang mau ikut? 😄</p>
                           <p class="text-[9px] text-zinc-600 mt-1 text-right">08.21 ✓✓</p>
                         </div>
@@ -551,10 +564,12 @@
  
                     <!-- msg: SiloKusuma (kiri) -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">S</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/202130049?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                          <p class="text-[10px] font-semibold text-emerald-400 mb-0.5">SiloKusuma</p>
+                          <p class="text-[10px] font-semibold text-emerald-400 mb-0.5">Vahllzzz</p>
                           <p class="text-[11px] text-zinc-200">Count me in! Nuxt 4 lagi hot banget, gue udah ngintip alpha-nya kemarin 🔥</p>
                           <p class="text-[9px] text-zinc-600 mt-1 text-right">08.23 ✓✓</p>
                         </div>
@@ -563,10 +578,12 @@
  
                     <!-- msg: rehan (kiri) -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">R</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/226198461?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                          <p class="text-[10px] font-semibold text-amber-400 mb-0.5">rehan</p>
+                          <p class="text-[10px] font-semibold text-amber-400 mb-0.5">radietya</p>
                           <p class="text-[11px] text-zinc-200">Gue juga! Btw Discord server-nya juga udah siap ya? Biar bisa diskusi lebih lanjut di sana 👀</p>
                           <p class="text-[9px] text-zinc-600 mt-1 text-right">08.25 ✓✓</p>
                         </div>
@@ -575,13 +592,15 @@
  
                     <!-- msg: davingm (kiri) reply -->
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">D</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/228839856?s=96&v=4" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div>
                         <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                          <p class="text-[10px] font-semibold text-violet-400 mb-0.5">davingm 👑</p>
+                          <p class="text-[10px] font-semibold text-violet-400 mb-0.5">teguh</p>
                           <!-- Quote reply -->
                           <div class="border-l-2 border-[#25D366] bg-zinc-800/60 rounded-r px-2 py-1 mb-1.5">
-                            <p class="text-[9px] text-[#25D366] font-medium">rehan</p>
+                            <p class="text-[9px] text-[#25D366] font-medium">rehan ram</p>
                             <p class="text-[9px] text-zinc-400 truncate">Discord server-nya juga udah siap ya?</p>
                           </div>
                           <p class="text-[11px] text-zinc-200">Udah bang! Link-nya bisa dicek di papan-info. Let's build something great bareng! 🚀</p>
@@ -611,9 +630,11 @@
                       <span class="text-[10px] text-zinc-400 bg-zinc-800/70 rounded-full px-3 py-1">KEMARIN</span>
                     </div>
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">P</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="/team/siro.webp" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                        <p class="text-[11px] text-zinc-200">Bang, project medsos-nya udah progress? Butuh bantuan ga? 😄</p>
+                        <p class="text-[11px] text-zinc-200">Bang Media Sosial NLFTs udah selesai dibuat nih. udah di cek belum? 😄</p>
                         <p class="text-[9px] text-zinc-600 mt-1 text-right">19.42 ✓✓</p>
                       </div>
                     </div>
@@ -629,7 +650,11 @@
                       </div>
                     </div>
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">P</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="/team/siro.webp" alt="" class="w-full h-full object-cover rounded-full">
+                      </div>
+                      </div>
                       <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
                         <p class="text-[11px] text-zinc-200">Aman, siap bang! 👍</p>
                         <p class="text-[9px] text-zinc-600 mt-1 text-right">19.44 ✓✓</p>
@@ -643,21 +668,41 @@
                       <span class="text-[10px] text-zinc-400 bg-zinc-800/70 rounded-full px-3 py-1">HARI INI</span>
                     </div>
                     <div class="flex gap-2 max-w-[85%]">
-                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">R</div>
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/232498018?s=130&v=4" alt="Habsy" class="w-full h-full object-cover rounded-full">
+                      </div>
                       <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
-                        <p class="text-[11px] text-zinc-200">Bang cek Discord yuk, ada diskusi Nuxt 4 nih 🔥</p>
-                        <p class="text-[9px] text-zinc-600 mt-1 text-right">20.11 ✓✓</p>
+                        <p class="text-[11px] text-zinc-200">Bang mau bahas Compiler Java yang kemaren kita buat? </p>
+                        <p class="text-[9px] text-zinc-600 mt-1 text-right">02.00 ✓✓</p>
                       </div>
                     </div>
                     <div class="flex justify-end">
                       <div class="max-w-[75%]">
                         <div class="bg-[#005c4b] rounded-2xl rounded-tr-sm px-3 py-2">
-                          <p class="text-[11px] text-zinc-200">Gaskeun! Lagi buka nih 👀</p>
+                          <p class="text-[11px] text-zinc-200">Kenapa harus jam 2 subuh woi 😭. install package baru aja lewat Maven</p>
                           <div class="flex items-center justify-end gap-1 mt-1">
                             <p class="text-[9px] text-zinc-400">20.13</p>
                             <svg class="w-3 h-3 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div class="flex gap-2 max-w-[85%]">
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/232498018?s=130&v=4" alt="Habsy" class="w-full h-full object-cover rounded-full">
+                      </div>
+                      <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
+                        <p class="text-[11px] text-zinc-200">Maaf Bang, soalnya saya gak bisa tidur karena error </p>
+                        <p class="text-[9px] text-zinc-600 mt-1 text-right">02.00 ✓✓</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-2 max-w-[85%]">
+                      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0 mt-1">
+                        <img src="https://avatars.githubusercontent.com/u/232498018?s=130&v=4" alt="Habsy" class="w-full h-full object-cover rounded-full">
+                      </div>
+                      <div class="bg-[#1f2c34] rounded-2xl rounded-tl-sm px-3 py-2">
+                        <p class="text-[11px] text-zinc-200">siap, ini lagi install Maven </p>
+                        <p class="text-[9px] text-zinc-600 mt-1 text-right">02.00 ✓✓</p>
                       </div>
                     </div>
                   </template>
@@ -684,7 +729,6 @@
                     </button>
                   </div>
                 </div>
- 
               </div>
             </div>
           </div>
@@ -692,34 +736,42 @@
  
         <!-- RIGHT: Text & CTA -->
         <div class="max-w-lg">
-          <span class="mb-6 inline-flex rounded-full border border-zinc-800 px-4 py-1 text-xs tracking-[0.2em] uppercase text-zinc-500">
+          <span class="mb-6 inline-flex rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-1 text-xs tracking-[0.2em] uppercase text-zinc-500">
             Community
           </span>
-          <h2 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h2 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl text-zinc-950 dark:text-white">
             Gabung Grup
             <span class="text-[#25D366]">WhatsApp</span>
           </h2>
-          <p class="mt-8 text-base leading-8 text-zinc-400">
+          <p class="mt-8 text-base leading-8 text-zinc-600 dark:text-zinc-400">
             Komunikasi cepat dan santai dengan komunitas lokal. Dapatkan update acara, pengumuman terbaru, dan ngobrol langsung bareng anggota kapan saja.
           </p>
           <div class="mt-10 flex gap-4">
-            <button class="rounded-xl bg-[#25D366] px-7 py-3 text-sm font-medium text-black transition hover:opacity-90 flex items-center gap-2">
+            <NuxtLink
+              to="/wa"
+              external
+              target="_blank"
+              class="rounded-xl bg-[#25D366] px-7 py-3 text-sm font-medium text-black transition hover:opacity-90 flex items-center gap-2"
+            >
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Gabung Grup
-            </button>
-            <button class="rounded-xl border border-zinc-800 px-7 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-700">
+            </NuxtLink>
+            <NuxtLink
+              to="/docs/getting-started#2-grup-whatsapp-terbuka-dengan-syarat"
+              class="rounded-xl border border-zinc-300 dark:border-zinc-800 px-7 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 transition hover:bg-zinc-100 dark:hover:bg-zinc-900/50 hover:border-zinc-400 dark:hover:border-zinc-700"
+            >
               Pelajari Lebih Lanjut
-            </button>
+            </NuxtLink>
           </div>
  
           <!-- Stats -->
-          <div class="mt-12 grid grid-cols-3 gap-6 border-t border-zinc-800 pt-8">
+          <div class="mt-12 grid grid-cols-3 gap-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
             <div>
-              <p class="text-2xl font-semibold text-white">120+</p>
+              <p class="text-2xl font-semibold text-zinc-950 dark:text-white">120+</p>
               <p class="text-xs text-zinc-500 mt-1">Anggota Aktif</p>
             </div>
             <div>
-              <p class="text-2xl font-semibold text-white">24/7</p>
+              <p class="text-2xl font-semibold text-zinc-950 dark:text-white">24/7</p>
               <p class="text-xs text-zinc-500 mt-1">Selalu Online</p>
             </div>
             <div>
@@ -732,45 +784,68 @@
       </div>
     </div>
   </section>
-
-
-    <section class="px-6 pb-32 max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div v-for="method in contactMethods" :key="method.name" 
-           class="p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl bg-zinc-50 dark:bg-[#0a0a0a] group hover:border-zinc-300 dark:hover:border-zinc-700 transition-all">
-        <h3 class="text-2xl font-medium mb-4 text-zinc-950 dark:text-white">{{ method.name }}</h3>
-        <p class="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">{{ method.description }}</p>
-        <button class="text-sm font-medium underline underline-offset-4 decoration-zinc-400 group-hover:text-zinc-950 dark:group-hover:text-white dark:group-hover:decoration-zinc-500 transition-all">
-          {{ method.action }}
-        </button>
+ 
+  <!-- Section GitHub Discussion -->
+  <section class="py-32 bg-zinc-50 dark:bg-black/20 border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="mb-16 text-center max-w-2xl mx-auto space-y-4">
+        <span class="inline-flex rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-1 text-xs tracking-[0.2em] uppercase text-zinc-500">
+          Collaboration
+        </span>
+        <h2 class="text-4xl font-semibold leading-tight tracking-tight md:text-5xl text-zinc-950 dark:text-white">
+          Diskusi Terbuka di <span class="text-[#f78166]">GitHub</span>
+        </h2>
+        <p class="text-base text-zinc-600 dark:text-zinc-400">
+          Ikuti diskusi teknis, bagikan ide, atau ajukan pertanyaan langsung di forum diskusi repositori GitHub resmi kami.
+        </p>
       </div>
-    </section>
-  <section class="relative px-6 py-24 bg-zinc-950 dark:bg-white text-zinc-100 dark:text-zinc-900 text-center overflow-hidden">
-    
-    <div class="absolute left-0 bottom-0 w-64 h-64 hidden lg:block translate-x-[-10%] translate-y-[10%]">
-      <img src="/images/arisu.png" alt="Kei Chibi" class="w-full h-full object-contain" />
+      <Githubdiscussion />
+    </div>
+  </section>
+ 
+<section class="relative px-6 py-24 bg-black dark:bg-white text-zinc-900 dark:text-zinc-100 text-center overflow-hidden border-t border-zinc-200 dark:border-zinc-800 transition-colors duration-300" >
+  <div class="absolute left-0 bottom-0 w-64 h-64 hidden lg:block translate-x-[-10%] translate-y-[10%]">
+      <img src="/images/arisu.webp" alt="Kei Chibi" class="w-full h-full object-contain" />
     </div>
 
     <div class="absolute right-0 bottom-0 w-64 h-64 hidden lg:block translate-x-[10%] translate-y-[10%]">
-      <img src="/images/kei.png" alt="Arisu Chibi" class="w-full h-full object-contain" />
+      <img src="/images/kei.webp" alt="Arisu Chibi" class="w-full h-full object-contain" />
     </div>
 
     <div class="relative z-10 max-w-2xl mx-auto space-y-8">
-      <h2 class="text-3xl md:text-4xl font-light text-white dark:text-zinc-950">
+      <h2 class="text-3xl md:text-4xl font-light text-zinc-950 dark:text-black">
         Siap berkontribusi?
       </h2>
-      <p class="text-zinc-400 dark:text-zinc-600">
+      <p class="text-zinc-600 dark:text-zinc-400">
         Setiap kode yang Anda bagikan dan setiap diskusi yang Anda ikuti membantu Indonesia menjadi lebih mandiri secara teknologi.
       </p>
-      <button class="px-8 py-4 bg-white dark:bg-zinc-950 text-black dark:text-white rounded-xl font-medium hover:opacity-90 transition-opacity">
+      <NuxtLink
+        to="/docs/cara-berkontribusi"
+        class="inline-block px-8 py-4 bg-zinc-900 dark:bg-black text-white dark:text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
+      >
         Mulai Sekarang
-      </button>
+      </NuxtLink>
     </div>
   </section>
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+
+useSeoMeta({
+  title: 'Terhubung dengan NLFTs — Komunitas Developer Indonesia',
+  ogTitle: 'Terhubung dengan NLFTs — Komunitas Developer Indonesia',
+  description: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
+  ogDescription: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
+  ogImage: 'https://nlfts.dev/nlfts.webp',
+  ogUrl: 'https://nlfts.dev/terhubung',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Terhubung dengan NLFTs — Komunitas Developer Indonesia',
+  twitterDescription: 'Hubungi dan bergabunglah dengan ekosistem NLFTs melalui Discord, WhatsApp Group, atau kontribusi GitHub. Temukan cara terbaik untuk terhubung dengan komunitas developer 24 jam non-stop.',
+  twitterImage: 'https://nlfts.dev/nlfts.webp',
+})
 
 const contactMethods = ref([
   { 
@@ -799,7 +874,7 @@ const categories = ref({
   voice: true
 })
  
-function toggleCategory(key) {
+function toggleCategory(key: 'info' | 'text' | 'voice') {
   categories.value[key] = !categories.value[key]
 }
  
@@ -817,7 +892,7 @@ const chatList = ref([
   {
     id: 'fts-group',
     name: 'FTs Project 🚀',
-    initial: 'F',
+    initial: './team/nlfts.webp',
     avatarColor: 'bg-gradient-to-br from-[#25D366] to-emerald-700',
     isGroup: true,
     lastMsg: 'Anda: See you guys di server 🙌',
@@ -828,8 +903,8 @@ const chatList = ref([
   },
   {
     id: 'plana-dm',
-    name: 'plana',
-    initial: 'P',
+    name: 'ashiro-tanka',
+    initial: './team/siro.webp',
     avatarColor: 'bg-gradient-to-br from-blue-500 to-cyan-600',
     isGroup: false,
     online: true,
@@ -841,12 +916,12 @@ const chatList = ref([
   },
   {
     id: 'rehan-dm',
-    name: 'rehan',
-    initial: 'R',
+    name: 'Miftah',
+    initial: 'https://avatars.githubusercontent.com/u/232498018?s=130&v=4',
     avatarColor: 'bg-gradient-to-br from-amber-500 to-orange-600',
     isGroup: false,
     online: false,
-    lastMsg: 'Gaskeun! Lagi buka nih 👀',
+    lastMsg: 'siap, ini lagi install Cargo',
     time: '20.13',
     unread: 2,
     sent: true,

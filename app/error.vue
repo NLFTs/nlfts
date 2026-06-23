@@ -1,68 +1,53 @@
-<script setup lang="ts">
-import type { NuxtError } from '#app'
-
-defineProps({
-  error: {
-    type: Object as PropType<NuxtError>,
-    required: true
-  }
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
-
-useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
-})
-
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
-  transform: data => data.find(item => item.path === '/docs')?.children || []
-})
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'))
-
-const links = [{
-  label: 'Docs',
-  icon: 'i-lucide-book',
-  to: '/docs/getting-started'
-}, {
-  label: 'Pricing',
-  icon: 'i-lucide-credit-card',
-  to: '/pricing'
-}, {
-  label: 'Blog',
-  icon: 'i-lucide-pencil',
-  to: '/blog'
-}]
-</script>
-
 <template>
-  <div>
-    <AppHeader />
+  <div class="min-h-screen flex items-center justify-center bg-white dark:bg-zinc-900 relative overflow-hidden">
 
-    <UMain>
-      <UContainer>
-        <UPage>
-          <UError :error="error" />
-        </UPage>
-      </UContainer>
-    </UMain>
+    <!-- Gambar di belakang teks -->
 
-    <AppFooter />
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+  <div class="w-72 h-92 md:w-96 md:h-[22rem] overflow-hidden opacity-20">
+    <img
+      src="/images/404.png"
+      alt="Background"
+      class="w-full h-full object-contain"
+    />
+  </div>
+</div>
 
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        shortcut="meta_k"
-        :navigation="navigation"
-        :links="links"
-        :fuse="{ resultLimit: 42 }"
-      />
-    </ClientOnly>
 
-    <UToaster />
+
+    <!-- Konten -->
+    <div class="text-center p-8 relative z-10 max-w-lg">
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-2">
+        Error {{ error?.statusCode || 404 }}
+      </p>
+
+      <h1 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
+        {{ error?.statusCode === 404
+          ? 'Halaman tidak ditemukan'
+          : 'Terjadi kesalahan'
+        }}
+      </h1>
+
+      <p class="text-base text-zinc-600 dark:text-zinc-400 mb-6">
+        {{ error?.message || 'Permintaan Anda tidak dapat diproses.' }}
+      </p>
+
+      <div class="flex gap-4 justify-center">
+        <NuxtLink
+          to="/"
+          class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 rounded"
+        >
+          Kembali ke Beranda
+        </NuxtLink>
+
+        <button
+          class="px-4 py-2 border rounded"
+          @click="$router.back()"
+        >
+          Halaman Sebelumnya
+        </button>
+      </div>
+    </div>
+
   </div>
 </template>

@@ -26,7 +26,7 @@
         <div class="sticky top-24 w-full">
           <div class="relative w-full aspect-[4/3] overflow-hidden dark:border-white/10">
             <img 
-              src="/location/indo.png" 
+              src="/location/indo.webp" 
               alt="Tim sedang berkolaborasi" 
               class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />

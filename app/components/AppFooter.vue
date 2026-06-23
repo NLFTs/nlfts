@@ -42,9 +42,9 @@ const columns = [
 
 const socialLinks = [
   { icon: 'i-simple-icons-github', to: 'https://github.com/NLFTs', label: 'GitHub' },
-  { icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/NLFTs_id', label: 'Instagram' },
-  { icon: 'i-simple-icons-whatsapp', to: 'https://wa.me/6283160325595', label: 'WhatsApp' },
-  { icon: 'i-simple-icons-tiktok', to: 'https://www.tiktok.com/@webcraftidng', label: 'TikTok' }
+  { icon: 'i-simple-icons-instagram', to: 'https://nlfts.dev/instagram', label: 'Instagram' },
+  { icon: 'i-simple-icons-whatsapp', to: 'https://nlfts.dev/wa', label: 'WhatsApp' },
+  { icon: 'i-simple-icons-tiktok', to: 'https://nlfts.dev/tiktok', label: 'TikTok' }
 ]
 
 // Elite Magnetic Link Effect
