@@ -241,6 +241,14 @@
 useSeoMeta({
   title: 'Corporate & Portfolio Site - Detail Layanan',
   description: 'Pengembangan arsitektur website statis modern berkecepatan ekstrem.',
+  ogTitle: 'Corporate & Portfolio Site - Detail Layanan',
+  ogDescription: 'Pengembangan arsitektur website statis modern berkecepatan ekstrem.',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://nlfts.dev/og/main.png'
 })
 
 const detailedFeatures = [

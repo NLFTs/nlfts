@@ -172,7 +172,12 @@ useSeoMeta({
   description: 'Layanan pengembangan website berbasis Vue, Nuxt, dan Next.js yang fokus pada kecepatan ekstrem, optimasi SEO, dan antarmuka minimalis modern.',
   ogTitle: 'Jasa Pembuatan Website Modern - NLFTs',
   ogDescription: 'Layanan pengembangan website berkinerja tinggi dengan arsitektur modern dan pendekatan bebas hambatan.',
-  ogImage: '/nlfts.webp'
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://nlfts.dev/og/main.png'
 })
 
 // Ditambahkan properti data "link" ke setiap layanan

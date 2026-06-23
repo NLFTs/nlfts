@@ -315,7 +315,12 @@ useSeoMeta({
   description: 'Pengembangan aplikasi iOS dan Android dengan Flutter, React Native, Kotlin, dan Swift. Arsitektur clean, CI/CD terintegrasi, keamanan enterprise-grade.',
   ogTitle: 'Jasa Pembuatan Aplikasi Mobile',
   ogDescription: 'Dari MVP hingga aplikasi berskala enterprise — kami bangun dengan arsitektur yang bisa tumbuh bersama bisnis Anda.',
-  ogImage: '/nlfts.webp'
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://nlfts.dev/og/main.png'
 })
 
 const pipeline = [

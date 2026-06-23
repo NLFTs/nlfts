@@ -49,13 +49,11 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
+      failOnError: false,
       routes: [
         '/',
         '/blog',
-        '/pricing',
-        '/pricing-android',
         '/changelog',
-        '/login',
         '/signup',
         '/blocked',
         '/rss.xml',

@@ -820,7 +820,7 @@
         Setiap kode yang Anda bagikan dan setiap diskusi yang Anda ikuti membantu Indonesia menjadi lebih mandiri secara teknologi.
       </p>
       <NuxtLink
-        to="/docs/cara-berkontribusi"
+        to="/docs/getting-started#cara-berkontribusi"
         class="inline-block px-8 py-4 bg-zinc-900 dark:bg-black text-white dark:text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
       >
         Mulai Sekarang

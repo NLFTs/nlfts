@@ -91,18 +91,22 @@
 // ============================================================
 // 1. METADATA (useHead) dengan moto global (opsional)
 // ============================================================
-useHead({
+useSeoMeta({
   title: 'Memberes — Kontributor',
-  meta: [
-    { name: 'description', content: 'Daftar kontributor proyek Memberes dengan moto dan tech stack masing-masing.' },
-    { property: 'og:title', content: 'Memberes — Kontributor' },
-    { property: 'og:description', content: 'Kenali para kontributor Memberes dan keahlian mereka.' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: 'https://avatars.githubusercontent.com/u/228851591?v=4' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Memberes — Kontributor' },
-    { name: 'twitter:description', content: 'Kenali para kontributor Memberes dan keahlian mereka.' },
-  ],
+  description: 'Daftar kontributor proyek Memberes dengan moto dan tech stack masing-masing.',
+  ogTitle: 'Memberes — Kontributor',
+  ogDescription: 'Kenali para kontributor Memberes dan keahlian mereka.',
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Memberes — Kontributor',
+  twitterDescription: 'Kenali para kontributor Memberes dan keahlian mereka.',
+  twitterImage: 'https://nlfts.dev/og/main.png'
+})
+
+useHead({
   link: [
     { rel: 'canonical', href: 'https://memberes.com/kontributor' }
   ]

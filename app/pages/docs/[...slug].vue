@@ -24,8 +24,12 @@ useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage: '/nlfts.webp',
-  twitterImage: '/nlfts.webp'
+  ogImage: 'https://nlfts.dev/og/main.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: 'image/png',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://nlfts.dev/og/main.png'
 })
 </script>
 
