@@ -27,7 +27,7 @@ const contributors = [
   { name: 'Ilaman', avatar: 'https://avatars.githubusercontent.com/u/228839961?s=130&v=4' },
   { name: 'jauf', avatar: 'https://avatars.githubusercontent.com/u/167701174?s=130&v=4' },
   { name: 'ferrr', avatar: 'https://avatars.githubusercontent.com/u/234127916?s=130&v=4' },
-  { name: 'Jack', avatar: 'https://i.pravatar.cc/100?u=24' }
+  { name: 'Naffez', avatar: 'https://avatars.githubusercontent.com/u/182593937?v=4' }
 ]
 
 gsap.registerPlugin(ScrollTrigger)

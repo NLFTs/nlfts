@@ -184,18 +184,18 @@ const Resources = [
     links: [
       { label: "Terhubung", to: "/terhubung" },
       { label: "Karir", to: "/karir" },
-      { label: "Marketing", to: "/marketing" },
-      { label: "Gallery", to: "/Gallery" },
+      { label: "Donation", to: "/donasi" },
+    { label: "Gallery", to: "/galeri" },
       { label: "Faq", to: "/faq" },
     ],
   },
   {
     title: "",
     links: [
-      { label: "Customers", to: "/customers" },
+      { label: "Sponsor", to: "/sponsor" },
       { label: "Marketplace", to: "/marketplace" },
-      { label: "Partner Finder", to: "/partner-finder" },
-      { label: "AWS", to: "/aws" },
+      { label: "Partner", to: "/partner" },
+      { label: "Contact Us", to: "/kontak" },
       { label: "Community ↗", to: "/community" },
     ],
   },
