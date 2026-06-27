@@ -61,19 +61,22 @@
         </p>
 
         <!-- Buttons -->
+         
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <button
-            class="cursor-pointer group relative overflow-hidden px-6 py-2.5 text-[13.5px] font-medium bg-white text-black transition-all duration-200 hover:-translate-y-px active:scale-95"
-          >
-            <span
-              class="absolute inset-0 bg-red-600 origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100"
-            ></span>
-
-            <span class="relative z-10 transition-colors duration-300">
-              Bergabung Sekarang
-            </span>
-          </button>
-          <button
+            <NuxtLink
+              to="/terhubung"
+              class="cursor-pointer group relative overflow-hidden px-6 py-2.5 text-[13.5px] font-medium bg-white text-black transition-all duration-200 hover:-translate-y-px active:scale-95"
+            >
+              <span
+                class="absolute inset-0 bg-red-600 origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100"
+              ></span>
+  
+              <span class="relative z-10 transition-colors duration-300">
+                Bergabung Sekarang
+              </span>
+            </NuxtLink>
+          <NuxtLink
+            to="/docs"
             class="group relative overflow-hidden flex items-center justify-center h-10 px-6
                   bg-white/5 border border-white/10 backdrop-blur-sm
                   text-[13.5px] text-white/70 cursor-pointer
@@ -95,7 +98,7 @@
                     group-hover:translate-y-0
                     group-hover:opacity-100"
             />
-          </button>
+          </NuxtLink>
         </div>
 
       </div>
