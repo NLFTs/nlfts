@@ -190,17 +190,21 @@ onMounted(() => {
     { y: 0, opacity: 1, duration: 0.8 }
   )
 
-  tl.fromTo(heroTitleRef.value, 
-    { y: 20, opacity: 0 },
-    { y: 0, opacity: 1 },
-    '-=0.6'
-  )
+  if (heroTitleRef.value) {
+    tl.fromTo(heroTitleRef.value, 
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1 },
+      '-=0.6'
+    )
+  }
 
-  tl.fromTo(heroDescRef.value, 
-    { y: 15, opacity: 0 },
-    { y: 0, opacity: 0.7 },
-    '-=0.6'
-  )
+  if (heroDescRef.value) {
+    tl.fromTo(heroDescRef.value, 
+      { y: 15, opacity: 0 },
+      { y: 0, opacity: 0.7 },
+      '-=0.6'
+    )
+  }
 
   tl.fromTo('.hero-actions', 
     { y: 10, opacity: 0 },

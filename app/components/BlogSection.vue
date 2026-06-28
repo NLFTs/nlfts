@@ -55,10 +55,10 @@ onMounted(async () => {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-zinc-200 dark:border-zinc-800">
-      <div 
+    <div 
         v-for="(post, index) in posts" 
         :key="index"
-        class="border-r border-b border-zinc-200 dark:border-zinc-800 p-8 hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors group"
+        class="blog-reveal border-r border-b border-zinc-200 dark:border-zinc-800 p-8 hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors group"
       >
         <NuxtLink :to="post.path" class="flex flex-col h-full justify-between">
           <div class="space-y-6">
