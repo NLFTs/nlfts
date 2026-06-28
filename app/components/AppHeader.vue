@@ -176,8 +176,8 @@ const Resources = [
       { label: "About", to: "/about" },
       { label: "Blog", to: "/blog" },
       { label: "Changelog", to: "/changelog" },
-      { label: "Members", to: "/members" },
-    ],
+      { label: "Members", to: "/members" }
+    ]
   },
   {
     title: "",
@@ -185,21 +185,21 @@ const Resources = [
       { label: "Terhubung", to: "/terhubung" },
       { label: "Karir", to: "/karir" },
       { label: "Donation", to: "/donasi" },
-    { label: "Gallery", to: "/galeri" },
-      { label: "Faq", to: "/faq" },
-    ],
+      { label: "Gallery", to: "/galeri" },
+      { label: "Faq", to: "/faq" }
+    ]
   },
   {
     title: "",
     links: [
-      { label: "Sponsor", to: "/sponsor" },
-      { label: "Marketplace", to: "/marketplace" },
-      { label: "Partner", to: "/partner" },
-      { label: "Contact Us", to: "/kontak" },
-      { label: "Community ↗", to: "/community" },
-    ],
-  },
-];
+      { label: "Sponsor", to: "https://github.com/sponsors/nlfts", target: "_blank", external: true },
+      { label: "Marketplace", to: "https://github.com/NLFTs", target: "_blank", external: true },
+      { label: "Partner", to: "/terhubung" },
+      { label: "Contact Us", to: "/terhubung" },
+      { label: "Community ↗", to: "https://discord.gg/uNc3r3ZKQx", target: "_blank", external: true }
+    ]
+  }
+]
 </script>
 
 <template>
@@ -310,9 +310,11 @@ const Resources = [
                   <ul class="space-y-2">
                     <li v-for="item in section.links" :key="item.to" class="dd-animate">
                       <HoverLink 
-                          :to="item.to" 
-                          :label="item.label" 
-                        />
+                        :to="item.to" 
+                        :label="item.label" 
+                        :target="item.target"
+                        :external="item.external"
+                      />
                     </li>
                   </ul>
                 </div>
@@ -431,6 +433,8 @@ const Resources = [
                     v-for="item in section.links"
                     :key="item.to"
                     :to="item.to"
+                    :target="item.target"
+                    :external="item.external"
                     class="flex items-center gap-2 py-1 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
                     @click="closeMobile"
                   >

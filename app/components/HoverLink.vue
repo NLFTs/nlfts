@@ -1,6 +1,8 @@
 <template>
   <NuxtLink
     :to="to"
+    :target="target"
+    :external="external"
     class="text-sm text-zinc-900 dark:text-zinc-100 hover:text-primary-500 transition-colors"
     @mouseenter="startShuffle"
   >
@@ -9,7 +11,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['label', 'to'])
+const props = defineProps(['label', 'to', 'target', 'external'])
 const displayText = ref(props.label)
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%'
 
